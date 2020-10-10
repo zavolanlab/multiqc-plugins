@@ -1,0 +1,12 @@
+README.md
+setup.py
+multiqc_alfa/__init__.py
+multiqc_alfa.egg-info/PKG-INFO
+multiqc_alfa.egg-info/SOURCES.txt
+multiqc_alfa.egg-info/dependency_links.txt
+multiqc_alfa.egg-info/entry_points.txt
+multiqc_alfa.egg-info/requires.txt
+multiqc_alfa.egg-info/top_level.txt
+multiqc_alfa/modules/__init__.py
+multiqc_alfa/modules/alfa/__init__.py
+multiqc_alfa/modules/alfa/alfa.py
