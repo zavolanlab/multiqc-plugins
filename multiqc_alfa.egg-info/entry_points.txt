@@ -1,3 +1,0 @@
-[multiqc.modules.v1]
-alfa = multiqc_alfa.modules.alfa:MultiqcModule
-
