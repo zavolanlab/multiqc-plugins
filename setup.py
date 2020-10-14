@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-version = '0.0.1'
-
 setup(
     name='multiqc_ALFA',
-    version=version,
+    version='0.0.1',
     author='Krish Agarwal',
     author_email='akrish136@gmail.com',
     description="MultiQC plugin for the Zavolab \
