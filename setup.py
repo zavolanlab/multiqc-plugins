@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 version = '0.0.1'
 
 setup(
-    name='multiqc_alfa',
+    name='multiqc_ALFA',
     version=version,
     author='Krish Agarwal',
     author_email='akrish136@gmail.com',
@@ -14,7 +14,7 @@ setup(
     keywords='bioinformatics',
     url='https://github.com/zavolanlab/multiqc-plugins',
     download_url='',  # after releasing a version
-    license='',  # to add
+    license='Apache 2.0',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -22,7 +22,7 @@ setup(
     ],
     entry_points={
         'multiqc.modules.v1': [
-            'alfa = multiqc_alfa.modules.alfa:MultiqcModule',
+            'ALFA = modules.ALFA:MultiqcModule',
         ],
     },
     classifiers=[
@@ -30,7 +30,7 @@ setup(
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Science/Research',
-        'License :: ',  # to add
+        'License :: Apache 2.0',
         'Natural Language :: English',
         'Operating System :: Unix',
         'Programming Language :: Python',
