@@ -6,7 +6,7 @@ setup(
     version="0.0.1",
     author="Krish Agarwal",
     author_email="akrish136@gmail.com",
-    description="MultiQC plugin for the Zavolab \
+    description="MultiQC plugin for the Zavolan Lab \
         @ University of Basel, Switzerland",
     long_description=__doc__,
     keywords="bioinformatics",
@@ -19,6 +19,9 @@ setup(
     entry_points={
         "multiqc.modules.v1": [
             "ALFA = modules.ALFA:MultiqcModule",
+        ],
+        "multiqc.hooks.v1": [
+            "execution_start = modules.ALFA.custom_code:ALFA_execution_start"
         ],
     },
     classifiers=[

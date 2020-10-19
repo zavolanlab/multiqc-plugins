@@ -22,3 +22,6 @@ jobs:
       - name: Install plugin
         run: |
           python setup.py install
+      - name: Plot ALFA plots
+        run: |
+          multiqc -m ALFA tests/

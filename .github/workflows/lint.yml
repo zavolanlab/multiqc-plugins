@@ -24,3 +24,4 @@ jobs:
         run: |
           black --check setup.py
           black --check modules/ALFA/ALFA.py
+          black --check modules/ALFA/custom_code.py
