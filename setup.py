@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="multiqc_ALFA",
+    name="multiqc_plugins",
     version="0.0.1",
     author="Krish Agarwal",
     author_email="akrish136@gmail.com",
-    description="MultiQC plugin for the Zavolan Lab \
+    description="MultiQC plugins for the Zavolan Lab \
         @ University of Basel, Switzerland",
     long_description=__doc__,
     keywords="bioinformatics",
