@@ -19,9 +19,7 @@ setup(
         "multiqc.modules.v1": [
             "ALFA = modules.ALFA:MultiqcModule",
         ],
-        "multiqc.hooks.v1": [
-            "execution_start = modules.ALFA:ALFA_execution_start"
-        ],
+        "multiqc.hooks.v1": ["execution_start = modules.ALFA:ALFA_execution_start"],
     },
     classifiers=[
         "Development Status :: Beta",
