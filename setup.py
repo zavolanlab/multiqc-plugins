@@ -20,7 +20,7 @@ setup(
             "ALFA = modules.ALFA:MultiqcModule",
         ],
         "multiqc.hooks.v1": [
-            "execution_start = modules.ALFA.ALFA:ALFA_execution_start"
+            "execution_start = modules.ALFA:ALFA_execution_start"
         ],
     },
     classifiers=[
