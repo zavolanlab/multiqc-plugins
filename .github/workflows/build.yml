@@ -19,9 +19,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install multiqc
-      - name: Install plugin
+      - name: Install plugins
         run: |
           python setup.py install
-      - name: Plot ALFA plots
+      - name: Test ALFA plugin
         run: |
           multiqc -m ALFA tests/

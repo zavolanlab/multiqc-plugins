@@ -19,9 +19,8 @@ jobs:
           pip install flake8 black
       - name: flake8
         run: |
-          flake8
+          flake8 --exclude modules/ALFA/__init__.py 
       - name: black
         run: |
           black --check setup.py
           black --check modules/ALFA/ALFA.py
-          black --check modules/ALFA/custom_code.py

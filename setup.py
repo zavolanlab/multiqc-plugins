@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from setuptools import setup, find_packages
 
 setup(
@@ -21,7 +20,7 @@ setup(
             "ALFA = modules.ALFA:MultiqcModule",
         ],
         "multiqc.hooks.v1": [
-            "execution_start = modules.ALFA.custom_code:ALFA_execution_start"
+            "execution_start = modules.ALFA.ALFA:ALFA_execution_start"
         ],
     },
     classifiers=[

@@ -16,14 +16,24 @@ import os
 
 from multiqc.plots import bargraph
 from multiqc.modules.base_module import BaseMultiqcModule
+from multiqc.utils import config
 
 # Initialise the logger
 log = logging.getLogger(__name__)
 
 
 class MultiqcModule(BaseMultiqcModule):
+    """
+    This class is instantiated in setup.py file and contains
+    all the functions required by the ALFA plugin.
+    """
+
     def __init__(self):
-        # Initialise the parent object
+        """
+        Initializes the parent function of MultiQC and calls
+        relevant functions for the searching of files and the
+        plotting of graphs
+        """
         super(MultiqcModule, self).__init__(
             name="ALFA",
             anchor="ALFA",
@@ -195,3 +205,21 @@ class MultiqcModule(BaseMultiqcModule):
             anchor="biotypes",
             plot=bargraph.plot(self.biotypes),
         )
+
+
+"""
+Setuptools hook to specify config and command-line functions.
+Add default config options for the things that are used in ALFA
+"""
+
+
+def ALFA_execution_start():
+    """Code to execute after the config files and
+    command line flags have been parsedself.
+    This setuptools hook is the earliest that will be able
+    to use custom command line flags.
+    """
+
+    # Add to the search patterns used by modules
+    if "ALFA" not in config.sp:
+        config.update_dict(config.sp, {"ALFA": {"fn": "*ALFA_feature_counts.tsv"}})
