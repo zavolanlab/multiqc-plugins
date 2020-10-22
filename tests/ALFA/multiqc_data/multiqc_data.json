@@ -2,9 +2,9 @@
     "report_data_sources": {},
     "report_general_stats_data": [],
     "report_general_stats_headers": [],
-    "report_multiqc_command": "/Users/maciek/miniconda3/envs/test/bin/multiqc -m ALFA tests/ALFA",
+    "report_multiqc_command": "/home/krish8484/.local/bin/multiqc -m ALFA tests/",
     "report_plot_data": {
-        "mqc_hcplot_kcmiyjfeus": {
+        "mqc_hcplot_knvzpiyaeo": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -35,21 +35,21 @@
                         ]
                     },
                     {
-                        "name": "start_codon",
-                        "data": [
-                            155958.24355000013,
-                            138276.87574000034,
-                            144119.5399099987,
-                            155837.00845
-                        ]
-                    },
-                    {
                         "name": "CDS",
                         "data": [
                             43425394.6267014,
                             42837769.342062384,
                             43443361.234860085,
                             44809188.28505908
+                        ]
+                    },
+                    {
+                        "name": "start_codon",
+                        "data": [
+                            155958.24355000013,
+                            138276.87574000034,
+                            144119.5399099987,
+                            155837.00845
                         ]
                     },
                     {
@@ -109,10 +109,10 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_kcmiyjfeus"
+                "id": "mqc_hcplot_knvzpiyaeo"
             }
         },
-        "mqc_hcplot_hylzunmgbk": {
+        "mqc_hcplot_qzyaleohcp": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -149,6 +149,15 @@
                             43188030.15056238,
                             43771693.99967008,
                             45118451.087819085
+                        ]
+                    },
+                    {
+                        "name": "ncRNA",
+                        "data": [
+                            22439.512389999993,
+                            20611.162519999994,
+                            19445.11565999996,
+                            17202.67765000002
                         ]
                     },
                     {
@@ -197,15 +206,6 @@
                         ]
                     },
                     {
-                        "name": "ncRNA",
-                        "data": [
-                            22439.512389999993,
-                            20611.162519999994,
-                            19445.11565999996,
-                            17202.67765000002
-                        ]
-                    },
-                    {
                         "name": "snRNA",
                         "data": [
                             18522.524979999987,
@@ -226,10 +226,10 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_hylzunmgbk"
+                "id": "mqc_hcplot_qzyaleohcp"
             }
         },
-        "mqc_hcplot_fcoyhxvjal": {
+        "mqc_hcplot_ycnsgxtqim": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -241,6 +241,15 @@
             ],
             "datasets": [
                 [
+                    {
+                        "name": "CDS",
+                        "data": [
+                            40087525.989621535,
+                            39716237.917611964,
+                            40192188.6208581,
+                            41312590.57822513
+                        ]
+                    },
                     {
                         "name": "intergenic",
                         "data": [
@@ -257,15 +266,6 @@
                             544266.5317901497,
                             540812.3518699389,
                             485613.4016101132
-                        ]
-                    },
-                    {
-                        "name": "CDS",
-                        "data": [
-                            40087525.989621535,
-                            39716237.917611964,
-                            40192188.6208581,
-                            41312590.57822513
                         ]
                     },
                     {
@@ -334,10 +334,10 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_fcoyhxvjal"
+                "id": "mqc_hcplot_ycnsgxtqim"
             }
         },
-        "mqc_hcplot_iurhjaftnz": {
+        "mqc_hcplot_wlyinsxdpe": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -349,6 +349,15 @@
             ],
             "datasets": [
                 [
+                    {
+                        "name": "protein_coding",
+                        "data": [
+                            40409753.86212153,
+                            40014898.29318196,
+                            40473443.7537881,
+                            41577011.46401513
+                        ]
+                    },
                     {
                         "name": "intergenic",
                         "data": [
@@ -365,15 +374,6 @@
                             544266.5317901497,
                             540812.3518699389,
                             485613.4016101132
-                        ]
-                    },
-                    {
-                        "name": "protein_coding",
-                        "data": [
-                            40409753.86212153,
-                            40014898.29318196,
-                            40473443.7537881,
-                            41577011.46401513
                         ]
                     },
                     {
@@ -451,23 +451,23 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_iurhjaftnz"
+                "id": "mqc_hcplot_wlyinsxdpe"
             }
         }
     },
     "report_saved_raw_data": {},
     "config_analysis_dir_abs": [
-        "/Users/maciek/Desktop/multiqc-plugins/tests/ALFA"
+        "/home/krish8484/multiqc-plugins/tests"
     ],
     "config_analysis_dir": [
-        "tests/ALFA"
+        "tests/"
     ],
-    "config_creation_date": "2020-10-20, 01:17",
+    "config_creation_date": "2020-10-22, 09:56",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/Users/maciek/miniconda3/envs/test/lib/python3.8/site-packages/multiqc/utils",
+    "config_script_path": "/home/krish8484/.local/lib/python3.6/site-packages/multiqc/utils",
     "config_short_version": "1.9",
     "config_subtitle": null,
     "config_title": null,

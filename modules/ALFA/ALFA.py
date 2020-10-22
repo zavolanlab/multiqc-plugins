@@ -32,7 +32,7 @@ class MultiqcModule(BaseMultiqcModule):
         """
         Initializes the parent function of MultiQC and calls
         relevant functions for the searching of files and the
-        plotting of graphs
+        plotting of graphs.
         """
         super(MultiqcModule, self).__init__(
             name="ALFA",
@@ -42,12 +42,22 @@ class MultiqcModule(BaseMultiqcModule):
                 documentation.",
         )
 
-        self.reset()
-        self.findLogs("Unique")
-        self.print_alfa_charts("Unique")
-        self.reset()
-        self.findLogs("UniqueMultiple")
-        self.print_alfa_charts("UniqueMultiple")
+        self.folders = []
+        self.find_parent_folders()
+
+        for folder in self.folders:
+            self.reset()
+            self.findLogs(folder)
+            self.print_alfa_charts(folder)
+
+    def find_parent_folders(self):
+        """
+        Finds the parent folders of log files to create a section for each folder
+        in multiQC report.
+        """
+        for f in self.find_log_files("ALFA"):
+            if os.path.basename(f["root"]) not in self.folders:
+                self.folders = self.folders + [os.path.basename(f["root"])]
 
     def reset(self):
         """

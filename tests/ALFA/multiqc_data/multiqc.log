@@ -1,40 +1,44 @@
-[2020-10-20 01:17:36,725] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/maciek/miniconda3/envs/test/lib/python3.8/site-packages/multiqc_config.yaml
-[2020-10-20 01:17:36,725] multiqc                                            [DEBUG  ]  No MultiQC config found: /Users/maciek/.multiqc_config.yaml
-[2020-10-20 01:17:36,726] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
-[2020-10-20 01:17:36,726] multiqc                                            [DEBUG  ]  Command used: /Users/maciek/miniconda3/envs/test/bin/multiqc -m ALFA tests/ALFA
-[2020-10-20 01:17:37,049] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.9
-[2020-10-20 01:17:37,049] multiqc                                            [INFO   ]  This is MultiQC v1.9
-[2020-10-20 01:17:37,049] multiqc                                            [DEBUG  ]  Command     : /Users/maciek/miniconda3/envs/test/bin/multiqc -m ALFA tests/ALFA
-[2020-10-20 01:17:37,050] multiqc                                            [DEBUG  ]  Working dir : /Users/maciek/Desktop/multiqc-plugins
-[2020-10-20 01:17:37,050] multiqc                                            [INFO   ]  Template    : default
-[2020-10-20 01:17:37,050] multiqc                                            [DEBUG  ]  Running Python 3.8.5 (default, Sep  4 2020, 02:22:02)  [Clang 10.0.0 ]
-[2020-10-20 01:17:37,050] multiqc                                            [INFO   ]  Searching   : /Users/maciek/Desktop/multiqc-plugins/tests/ALFA
-[2020-10-20 01:17:37,050] multiqc                                            [INFO   ]  Only using modules ALFA
-[2020-10-20 01:17:37,050] multiqc                                            [DEBUG  ]  Analysing modules: ALFA
-[2020-10-20 01:17:37,051] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/nk/5vyq5brx1271grs0t2l1q3qw0000gn/T/tmp5gmuifgv
-[2020-10-20 01:17:37,055] multiqc                                            [DEBUG  ]  Ignored 234 search patterns as didn't match running modules.
-[2020-10-20 01:17:37,060] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,060] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,060] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,060] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,063] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,063] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,064] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2020-10-20 01:17:37,065] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2020-10-20 01:17:37,075] multiqc                                            [INFO   ]  Compressing plot data
-[2020-10-20 01:17:37,085] multiqc                                            [INFO   ]  Report      : multiqc_report.html
-[2020-10-20 01:17:37,085] multiqc                                            [INFO   ]  Data        : multiqc_data
-[2020-10-20 01:17:37,085] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/nk/5vyq5brx1271grs0t2l1q3qw0000gn/T/tmp5gmuifgv/multiqc_data' to '/Users/maciek/Desktop/multiqc-plugins/multiqc_data'
-[2020-10-20 01:17:37,183] multiqc                                            [INFO   ]  MultiQC complete
+[2020-10-22 09:56:18,577] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/.local/lib/python3.6/site-packages/multiqc_config.yaml
+[2020-10-22 09:56:18,577] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/.multiqc_config.yaml
+[2020-10-22 09:56:18,577] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2020-10-22 09:56:18,577] multiqc                                            [DEBUG  ]  Command used: /home/krish8484/.local/bin/multiqc -m ALFA tests/
+[2020-10-22 09:56:19,734] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.9
+[2020-10-22 09:56:19,735] multiqc                                            [INFO   ]  Running Example MultiQC Plugin v0.1
+[2020-10-22 09:56:19,737] multiqc                                            [INFO   ]  This is MultiQC v1.9
+[2020-10-22 09:56:19,737] multiqc                                            [DEBUG  ]  Command     : /home/krish8484/.local/bin/multiqc -m ALFA tests/
+[2020-10-22 09:56:19,737] multiqc                                            [DEBUG  ]  Working dir : /home/krish8484/multiqc-plugins
+[2020-10-22 09:56:19,737] multiqc                                            [INFO   ]  Template    : default
+[2020-10-22 09:56:19,737] multiqc                                            [DEBUG  ]  Running Python 3.6.9 (default, Oct  8 2020, 12:12:24)  [GCC 8.4.0]
+[2020-10-22 09:56:19,738] multiqc                                            [INFO   ]  Searching   : /home/krish8484/multiqc-plugins/tests
+[2020-10-22 09:56:19,739] multiqc                                            [INFO   ]  Only using modules ALFA
+[2020-10-22 09:56:19,739] multiqc                                            [DEBUG  ]  Analysing modules: ALFA
+[2020-10-22 09:56:19,740] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp8o6hf_q5
+[2020-10-22 09:56:19,755] multiqc                                            [DEBUG  ]  Ignored 236 search patterns as didn't match running modules.
+[2020-10-22 09:56:19,762] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: tests/ALFA/multiqc_data
+[2020-10-22 09:56:19,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: TIN_scores_boxplot_mqc.pdf
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,774] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,775] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,776] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,776] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,776] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,776] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,776] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,777] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,777] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,777] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2020-10-22 09:56:19,777] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2020-10-22 09:56:19,795] multiqc                                            [INFO   ]  Compressing plot data
+[2020-10-22 09:56:19,807] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2020-10-22 09:56:19,807] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2020-10-22 09:56:19,807] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8o6hf_q5/multiqc_data' to '/home/krish8484/multiqc-plugins/multiqc_data'
+[2020-10-22 09:56:19,936] multiqc                                            [INFO   ]  MultiQC complete
