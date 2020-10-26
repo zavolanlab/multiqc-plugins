@@ -17,6 +17,7 @@ import os
 from multiqc.plots import bargraph
 from multiqc.modules.base_module import BaseMultiqcModule
 from multiqc.utils import config
+import math
 
 # Initialise the logger
 log = logging.getLogger(__name__)
@@ -49,6 +50,9 @@ class MultiqcModule(BaseMultiqcModule):
             self.reset()
             self.findLogs(folder)
             self.print_alfa_charts(folder)
+            self.calculatePercentage()
+            self.calculateEnhancement()
+            self.print_alfa_charts_enhancement(folder)
 
     def find_parent_folders(self):
         """
@@ -73,11 +77,23 @@ class MultiqcModule(BaseMultiqcModule):
         self.biotypes = dict()
         self.biotypes["temp"] = {}
 
+        self.categories_size = dict()
+        self.categories_size["temp"] = {}
+
+        self.biotypes_size = dict()
+        self.biotypes_size["temp"] = {}
+
         self.categories_temp = dict()
         self.categories_temp["temp"] = {}
 
         self.biotypes_temp = dict()
         self.biotypes_temp["temp"] = {}
+
+        self.categories_size_temp = dict()
+        self.categories_size_temp["temp"] = {}
+
+        self.biotypes_size_temp = dict()
+        self.biotypes_size_temp["temp"] = {}
 
         # Number of ALFA reports
         self.number = 0
@@ -98,10 +114,18 @@ class MultiqcModule(BaseMultiqcModule):
                 if filename not in self.filesDone:
                     self.number = self.number + 1
                     self.filesDone = self.filesDone + [filename]
-                    self.categories_temp, self.biotypes_temp = self.parse_alfa_logs(
-                        f, filename
+                    (
+                        self.categories_temp,
+                        self.biotypes_temp,
+                        self.categories_size_temp,
+                        self.biotypes_size_temp,
+                    ) = self.parse_alfa_logs(f, filename)
+                    self.updateDictValues(
+                        self.categories_temp,
+                        self.biotypes_temp,
+                        self.categories_size_temp,
+                        self.biotypes_size_temp,
                     )
-                    self.updateDictValues(self.categories_temp, self.biotypes_temp)
 
                 if self.number == 0:
                     raise UserWarning
@@ -146,6 +170,12 @@ class MultiqcModule(BaseMultiqcModule):
         biodict = dict()
         biodict["temp"] = {}
 
+        catdict_size = dict()
+        catdict["temp"] = {}
+
+        biodict_size = dict()
+        biodict["temp"] = {}
+
         # Adding tsv values to a dictionary
         for i_num in range(len(listToStr)):
             if i_num < 3:
@@ -159,6 +189,12 @@ class MultiqcModule(BaseMultiqcModule):
                 catdict[filename].setdefault(cat, 0)
                 biodict[filename].setdefault(bio, 0)
 
+                catdict_size.setdefault(filename, {})
+                biodict_size.setdefault(filename, {})
+
+                catdict_size[filename].setdefault(cat, 0)
+                biodict_size[filename].setdefault(bio, 0)
+
                 catdict[filename][cat] = catdict[filename][cat] + float(
                     listToStr[i_num + 1]
                 )
@@ -166,9 +202,21 @@ class MultiqcModule(BaseMultiqcModule):
                     listToStr[i_num + 1]
                 )
 
-        return catdict, biodict
+                catdict_size[filename][cat] = catdict_size[filename][cat] + float(
+                    listToStr[i_num + 2]
+                )
+                biodict_size[filename][bio] = biodict_size[filename][bio] + float(
+                    listToStr[i_num + 2]
+                )
+        return catdict, biodict, catdict_size, biodict_size
 
-    def updateDictValues(self, categories_temp: dict, biotypes_temp: dict):
+    def updateDictValues(
+        self,
+        categories_temp: dict,
+        biotypes_temp: dict,
+        categories_size_temp: dict,
+        biotypes_size_temp: dict,
+    ):
         """
         Takes categories and biotypes data from dictonaries containg values
         from one file and add them into the the dictionaries previously
@@ -181,6 +229,10 @@ class MultiqcModule(BaseMultiqcModule):
         del categories_temp["temp"]
         del biotypes_temp["temp"]
 
+        if "temp" in self.categories_size:
+            del self.categories_size["temp"]
+        if "temp" in self.biotypes_size:
+            del self.biotypes_size["temp"]
         # Combining both the dictionaries
         for i in categories_temp.keys():
             found = 0
@@ -200,6 +252,24 @@ class MultiqcModule(BaseMultiqcModule):
             if found == 0:
                 self.biotypes[i] = biotypes_temp[i]
 
+        for i in categories_size_temp.keys():
+            found = 0
+            for j in self.categories_size.keys():
+                if i == j:
+                    found = 1
+                    self.categories_size[j].update(categories_size_temp[i])
+            if found == 0:
+                self.categories_size[i] = categories_size_temp[i]
+
+        for i in biotypes_size_temp.keys():
+            found = 0
+            for j in self.biotypes_size.keys():
+                if i == j:
+                    found = 1
+                    self.biotypes_size[j].update(biotypes_size_temp[i])
+            if found == 0:
+                self.biotypes_size[i] = biotypes_size_temp[i]
+
     def print_alfa_charts(self, folder: str):
         """
         Takes in dictionary containing parsed data and passes them to MultiQC
@@ -215,6 +285,131 @@ class MultiqcModule(BaseMultiqcModule):
             anchor="biotypes",
             plot=bargraph.plot(self.biotypes),
         )
+
+    def print_alfa_charts_enhancement(self, folder: str):
+        """
+        Takes in dictionary containing parsed data and passes them to MultiQC
+        function to print the enhancement graphs.
+        """
+        cats = []
+        for i in self.categories.keys():
+            for j in self.categories[i]:
+                cats.append(str(j))
+
+        bios = []
+        for i in self.biotypes.keys():
+            for j in self.biotypes[i]:
+                bios.append(str(j))
+
+        config = {
+            # Building the plot
+            "id": "<random string>",  # HTML ID used for plot
+            "cpswitch": False,  # Show the 'Counts / Percentages' switch?
+            "cpswitch_c_active": True,
+            # Initial display with 'Counts' specified? False for percentages.
+            "cpswitch_counts_label": "Counts",  # Label for 'Counts' button
+            "cpswitch_percent_label": "Percentages",  # Label for 'Percentages' button
+            "logswitch": False,  # Show the 'Log10' switch?
+            "logswitch_active": False,  # Initial display with 'Log10' active?
+            "logswitch_label": "Log10",  # Label for 'Log10' button
+            "hide_zero_cats": False,  # Hide categories where data for all samples is 0
+            # Customising the plot
+            "title": None,  # Plot title - should be in format "Module Name: Plot Title"
+            "xlab": None,  # X axis label
+            "ylab": None,  # Y axis label
+            "ymax": None,  # Max y limit
+            "ymin": None,  # Min y limit
+            "yCeiling": None,
+            # Maximum value for automatic axis limit (good for percentages)
+            "yFloor": None,  # Minimum value for automatic axis limit
+            "yMinRange": None,  # Minimum range for axis
+            "yDecimals": True,  # Set to false to only show integer labels
+            "ylab_format": None,  # Format string for x axis labels. Defaults to {value}
+            "stacking": None,  # Set to None to have category bars side by side
+            "use_legend": True,  # Show / hide the legend
+            "click_func": None,
+            # Javascript function to be called when a point is clicked
+            "cursor": None,  # CSS mouse cursor type.
+            "tt_decimals": 2,  # Number of decimal places to use in the tooltip number
+            "tt_suffix": "",  # Suffix to add after tooltip number
+            "tt_percentages": False,
+            # Show the percentages of each count in the tooltip
+        }
+        self.add_section(
+            name=f"{folder}-Enhancement-Categories",
+            anchor="categories",
+            plot=bargraph.plot(self.categories, cats, config),
+        )
+        self.add_section(
+            name=f"{folder}-Enhancement-BioTypes",
+            anchor="biotypes",
+            plot=bargraph.plot(self.biotypes, bios, config),
+        )
+
+    def calculatePercentage(self):
+        """
+        Calculates the percentage of each type, needed for the enhancement graphs.
+        """
+        categories_total = dict()
+        biotypes_total = dict()
+        for i in self.categories.keys():
+            for j in self.categories[i]:
+                categories_total[i] = categories_total.get(i, 0) + self.categories[i][j]
+        for i in self.biotypes.keys():
+            for j in self.biotypes[i]:
+                biotypes_total[i] = biotypes_total.get(i, 0) + self.biotypes[i][j]
+
+        # Divinding by total subiotypes
+        for i in self.categories.keys():
+            for j in self.categories[i]:
+                self.categories[i][j] = (
+                    self.categories[i][j] / categories_total[i] * 100
+                )
+        for i in self.biotypes.keys():
+            for j in self.biotypes[i]:
+                self.biotypes[i][j] = self.biotypes[i][j] / biotypes_total[i] * 100
+
+        categories_size_total = dict()
+        biotypes_size_total = dict()
+        for i in self.categories_size.keys():
+            for j in self.categories_size[i]:
+                categories_size_total[i] = (
+                    categories_size_total.get(i, 0) + self.categories_size[i][j]
+                )
+        for i in self.biotypes_size.keys():
+            for j in self.biotypes_size[i]:
+                biotypes_size_total[i] = (
+                    biotypes_size_total.get(i, 0) + self.biotypes_size[i][j]
+                )
+
+        # Divinding by total subiotypes
+        for i in self.categories_size.keys():
+            for j in self.categories_size[i]:
+                self.categories_size[i][j] = (
+                    self.categories_size[i][j] / categories_size_total[i] * 100
+                )
+        for i in self.biotypes_size.keys():
+            for j in self.biotypes_size[i]:
+                self.biotypes_size[i][j] = (
+                    self.biotypes_size[i][j] / biotypes_size_total[i] * 100
+                )
+
+    def calculateEnhancement(self):
+        """
+        Calculates percentage of nucleotides divided by percentage of genome for
+        total enrichment or depletion.
+        """
+        for i in self.categories.keys():
+            for j in self.categories[i]:
+                self.categories[i][j] = math.log10(
+                    self.categories[i][j] / self.categories_size[i][j]
+                )
+
+        for i in self.biotypes.keys():
+            for j in self.biotypes[i]:
+                self.biotypes[i][j] = math.log10(
+                    self.biotypes[i][j] / self.biotypes_size[i][j]
+                )
 
 
 """

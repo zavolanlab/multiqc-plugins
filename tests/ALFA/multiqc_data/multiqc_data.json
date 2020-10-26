@@ -4,7 +4,7 @@
     "report_general_stats_headers": [],
     "report_multiqc_command": "/home/krish8484/.local/bin/multiqc -m ALFA tests/",
     "report_plot_data": {
-        "mqc_hcplot_knvzpiyaeo": {
+        "mqc_hcplot_igvuxclthn": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -109,10 +109,10 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_knvzpiyaeo"
+                "id": "mqc_hcplot_igvuxclthn"
             }
         },
-        "mqc_hcplot_qzyaleohcp": {
+        "mqc_hcplot_xcgzveajud": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -226,10 +226,285 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_qzyaleohcp"
+                "id": "mqc_hcplot_xcgzveajud"
             }
         },
-        "mqc_hcplot_ycnsgxtqim": {
+        "mqc__random_string_": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "WT_rep1_WT",
+                    "WT_rep2_WT",
+                    "mut_GCN4_rep1_mut_GCN4",
+                    "mut_GCN4_rep2_mut_GCN4"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "intergenic",
+                        "data": [
+                            -0.15543627643996485,
+                            -0.11779045895551377,
+                            -0.1721725887462462,
+                            -0.27946680097085325
+                        ]
+                    },
+                    {
+                        "name": "opposite_strand",
+                        "data": [
+                            -1.5551747655218946,
+                            -1.5534488403728153,
+                            -1.5534094321772163,
+                            -1.6028008193306198
+                        ]
+                    },
+                    {
+                        "name": "CDS",
+                        "data": [
+                            0.32561333643617935,
+                            0.3214482617125388,
+                            0.3281568838142537,
+                            0.3394018720459414
+                        ]
+                    },
+                    {
+                        "name": "start_codon",
+                        "data": [
+                            0.5256652652679433,
+                            0.47515833929357265,
+                            0.49374369857172773,
+                            0.5254927651030186
+                        ]
+                    },
+                    {
+                        "name": "stop_codon",
+                        "data": [
+                            0.38264898962592436,
+                            0.39941861277542035,
+                            0.30976468229476944,
+                            0.19117919788832227
+                        ]
+                    },
+                    {
+                        "name": "intron",
+                        "data": [
+                            -0.16984654835787724,
+                            -0.22825082826873053,
+                            -0.2563841680117993,
+                            -0.30245463324675953
+                        ]
+                    },
+                    {
+                        "name": "exon",
+                        "data": [
+                            -0.8008182369823883,
+                            -0.8434540735240298,
+                            -0.8755275740001023,
+                            -0.9306799852548566
+                        ]
+                    },
+                    {
+                        "name": "ambiguous",
+                        "data": [
+                            -0.16817480976036708,
+                            -0.23130107523939983,
+                            -0.2730118875177408,
+                            -0.3446996837191735
+                        ]
+                    },
+                    {
+                        "name": "five_prime_utr",
+                        "data": [
+                            1.1099440789649073,
+                            1.0498259081986483,
+                            1.047159418601392,
+                            1.043045605941664
+                        ]
+                    },
+                    {
+                        "name": "transcript",
+                        "data": [
+                            -1.1358645786329922,
+                            -1.2753384778159904,
+                            -1.2555769113456252,
+                            -1.2598255390325883
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "mqc__random_string",
+                "cpswitch": false,
+                "cpswitch_c_active": true,
+                "cpswitch_counts_label": "Counts",
+                "cpswitch_percent_label": "Percentages",
+                "logswitch": false,
+                "logswitch_active": false,
+                "logswitch_label": "Log10",
+                "hide_zero_cats": false,
+                "title": null,
+                "xlab": null,
+                "ylab": null,
+                "ymax": null,
+                "ymin": null,
+                "yCeiling": null,
+                "yFloor": null,
+                "yMinRange": null,
+                "yDecimals": true,
+                "ylab_format": null,
+                "stacking": null,
+                "use_legend": true,
+                "click_func": null,
+                "cursor": null,
+                "tt_decimals": 2,
+                "tt_suffix": "",
+                "tt_percentages": false
+            }
+        },
+        "mqc__random_string": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "WT_rep1_WT",
+                    "WT_rep2_WT",
+                    "mut_GCN4_rep1_mut_GCN4",
+                    "mut_GCN4_rep2_mut_GCN4"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "intergenic",
+                        "data": [
+                            -0.1554362764399648,
+                            -0.11779045895551371,
+                            -0.1721725887462462,
+                            -0.27946680097085325
+                        ]
+                    },
+                    {
+                        "name": "opposite_strand",
+                        "data": [
+                            -1.5551747655218944,
+                            -1.5534488403728153,
+                            -1.5534094321772163,
+                            -1.6028008193306198
+                        ]
+                    },
+                    {
+                        "name": "protein_coding",
+                        "data": [
+                            0.3239902161884537,
+                            0.31959382850564433,
+                            0.3260358378030117,
+                            0.33699799618503284
+                        ]
+                    },
+                    {
+                        "name": "ncRNA",
+                        "data": [
+                            -0.18524383032604033,
+                            -0.22040290708387533,
+                            -0.2450828134346933,
+                            -0.30049596174792215
+                        ]
+                    },
+                    {
+                        "name": "tRNA",
+                        "data": [
+                            -1.3860949386386072,
+                            -1.3054199365352126,
+                            -1.3365893182168194,
+                            -1.4022075054020873
+                        ]
+                    },
+                    {
+                        "name": "ambiguous",
+                        "data": [
+                            -0.16817480976036694,
+                            -0.23130107523939983,
+                            -0.2730118875177408,
+                            -0.3446996837191735
+                        ]
+                    },
+                    {
+                        "name": "transposable_element",
+                        "data": [
+                            -1.548320166752864,
+                            -1.5330707468171716,
+                            -1.5972459416304918,
+                            -1.5683441170974322
+                        ]
+                    },
+                    {
+                        "name": "snoRNA",
+                        "data": [
+                            0.2787234445013037,
+                            0.24995475565543995,
+                            0.19281177975710692,
+                            0.121760277893155
+                        ]
+                    },
+                    {
+                        "name": "pseudogene",
+                        "data": [
+                            -1.3243835271724733,
+                            -1.3398252982935162,
+                            -1.3008325449489726,
+                            -1.3226529589598612
+                        ]
+                    },
+                    {
+                        "name": "snRNA",
+                        "data": [
+                            0.5469116400598755,
+                            0.3620309243897129,
+                            0.4287850434131217,
+                            0.34554759922049255
+                        ]
+                    },
+                    {
+                        "name": "rRNA",
+                        "data": [
+                            -1.1155341215474783,
+                            -1.1629547304429009,
+                            -1.151370252250258,
+                            -1.2864702373044719
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "mqc__random_string",
+                "cpswitch": false,
+                "cpswitch_c_active": true,
+                "cpswitch_counts_label": "Counts",
+                "cpswitch_percent_label": "Percentages",
+                "logswitch": false,
+                "logswitch_active": false,
+                "logswitch_label": "Log10",
+                "hide_zero_cats": false,
+                "title": null,
+                "xlab": null,
+                "ylab": null,
+                "ymax": null,
+                "ymin": null,
+                "yCeiling": null,
+                "yFloor": null,
+                "yMinRange": null,
+                "yDecimals": true,
+                "ylab_format": null,
+                "stacking": null,
+                "use_legend": true,
+                "click_func": null,
+                "cursor": null,
+                "tt_decimals": 2,
+                "tt_suffix": "",
+                "tt_percentages": false
+            }
+        },
+        "mqc_hcplot_hqksdajevn": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -334,10 +609,10 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_ycnsgxtqim"
+                "id": "mqc_hcplot_hqksdajevn"
             }
         },
-        "mqc_hcplot_wlyinsxdpe": {
+        "mqc_hcplot_mzkyphuwgn": {
             "plot_type": "bar_graph",
             "samples": [
                 [
@@ -451,7 +726,282 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_wlyinsxdpe"
+                "id": "mqc_hcplot_mzkyphuwgn"
+            }
+        },
+        "mqc__random_string_-1": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "WT_rep1_WT",
+                    "WT_rep2_WT",
+                    "mut_GCN4_rep1_mut_GCN4",
+                    "mut_GCN4_rep2_mut_GCN4"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "CDS",
+                        "data": [
+                            0.2918503966945284,
+                            0.28938824584922573,
+                            0.2953330687910367,
+                            0.3049661227054138
+                        ]
+                    },
+                    {
+                        "name": "intergenic",
+                        "data": [
+                            -0.21268524592519342,
+                            -0.17581629863340817,
+                            -0.22632847057862152,
+                            -0.3295611964804742
+                        ]
+                    },
+                    {
+                        "name": "opposite_strand",
+                        "data": [
+                            -1.5857344939786544,
+                            -1.580097318264998,
+                            -1.5820910747960757,
+                            -1.6311547325734639
+                        ]
+                    },
+                    {
+                        "name": "start_codon",
+                        "data": [
+                            0.4553836094366555,
+                            0.405840278680792,
+                            0.4245499916341028,
+                            0.45462897383860496
+                        ]
+                    },
+                    {
+                        "name": "stop_codon",
+                        "data": [
+                            0.3185470830481629,
+                            0.3333780413697169,
+                            0.2512404554611596,
+                            0.1360246678874283
+                        ]
+                    },
+                    {
+                        "name": "intron",
+                        "data": [
+                            -0.24070557029521875,
+                            -0.29671588255890374,
+                            -0.3249683973296853,
+                            -0.3728940215760318
+                        ]
+                    },
+                    {
+                        "name": "exon",
+                        "data": [
+                            0.7266257918467716,
+                            0.7103859590618073,
+                            0.7100955846840715,
+                            0.7173475838795629
+                        ]
+                    },
+                    {
+                        "name": "ambiguous",
+                        "data": [
+                            0.58730740474465,
+                            0.6208232600173812,
+                            0.5628846215747747,
+                            0.5443580783230204
+                        ]
+                    },
+                    {
+                        "name": "five_prime_utr",
+                        "data": [
+                            1.036767282573106,
+                            0.9777697904907584,
+                            0.9753686548705842,
+                            0.9697084147028889
+                        ]
+                    },
+                    {
+                        "name": "transcript",
+                        "data": [
+                            -1.0469791284896923,
+                            -1.1012356685619291,
+                            -1.1236695367296983,
+                            -1.1117250275904762
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "mqc__random_string_-1-1",
+                "cpswitch": false,
+                "cpswitch_c_active": true,
+                "cpswitch_counts_label": "Counts",
+                "cpswitch_percent_label": "Percentages",
+                "logswitch": false,
+                "logswitch_active": false,
+                "logswitch_label": "Log10",
+                "hide_zero_cats": false,
+                "title": null,
+                "xlab": null,
+                "ylab": null,
+                "ymax": null,
+                "ymin": null,
+                "yCeiling": null,
+                "yFloor": null,
+                "yMinRange": null,
+                "yDecimals": true,
+                "ylab_format": null,
+                "stacking": null,
+                "use_legend": true,
+                "click_func": null,
+                "cursor": null,
+                "tt_decimals": 2,
+                "tt_suffix": "",
+                "tt_percentages": false
+            }
+        },
+        "mqc__random_string_-1-1": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "WT_rep1_WT",
+                    "WT_rep2_WT",
+                    "mut_GCN4_rep1_mut_GCN4",
+                    "mut_GCN4_rep2_mut_GCN4"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "protein_coding",
+                        "data": [
+                            0.2899363663064308,
+                            0.287250878549272,
+                            0.2929705905729304,
+                            0.3023459818851259
+                        ]
+                    },
+                    {
+                        "name": "intergenic",
+                        "data": [
+                            -0.21268524592519342,
+                            -0.17581629863340795,
+                            -0.22632847057862152,
+                            -0.3295611964804742
+                        ]
+                    },
+                    {
+                        "name": "opposite_strand",
+                        "data": [
+                            -1.5857344939786544,
+                            -1.5800973182649978,
+                            -1.5820910747960757,
+                            -1.6311547325734639
+                        ]
+                    },
+                    {
+                        "name": "ncRNA",
+                        "data": [
+                            -0.25038279115205564,
+                            -0.283964222918976,
+                            -0.31163229861190983,
+                            -0.3690644736985428
+                        ]
+                    },
+                    {
+                        "name": "tRNA",
+                        "data": [
+                            -1.1975992131478719,
+                            -1.0845821338362398,
+                            -1.1451141851399678,
+                            -1.2338153048743732
+                        ]
+                    },
+                    {
+                        "name": "ambiguous",
+                        "data": [
+                            0.58730740474465,
+                            0.6208232600173813,
+                            0.5628846215747747,
+                            0.5443580783230204
+                        ]
+                    },
+                    {
+                        "name": "pseudogene",
+                        "data": [
+                            -1.3468792496747124,
+                            -1.3700338886052332,
+                            -1.3184990672900043,
+                            -1.3457531177508832
+                        ]
+                    },
+                    {
+                        "name": "transposable_element",
+                        "data": [
+                            -0.5023418191191176,
+                            -0.4921107954200993,
+                            -0.6055672143051916,
+                            -0.5592217035381666
+                        ]
+                    },
+                    {
+                        "name": "snoRNA",
+                        "data": [
+                            0.20809674257439684,
+                            0.17963516815672814,
+                            0.12329974473880677,
+                            0.05057360565471927
+                        ]
+                    },
+                    {
+                        "name": "snRNA",
+                        "data": [
+                            0.47383033939840125,
+                            0.2901446240827281,
+                            0.3571715604524629,
+                            0.2724468487483699
+                        ]
+                    },
+                    {
+                        "name": "rRNA",
+                        "data": [
+                            1.9104582460464188,
+                            1.893635502587477,
+                            1.8989291822780539,
+                            1.9060240271951345
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "mqc__random_string_-1-1",
+                "cpswitch": false,
+                "cpswitch_c_active": true,
+                "cpswitch_counts_label": "Counts",
+                "cpswitch_percent_label": "Percentages",
+                "logswitch": false,
+                "logswitch_active": false,
+                "logswitch_label": "Log10",
+                "hide_zero_cats": false,
+                "title": null,
+                "xlab": null,
+                "ylab": null,
+                "ymax": null,
+                "ymin": null,
+                "yCeiling": null,
+                "yFloor": null,
+                "yMinRange": null,
+                "yDecimals": true,
+                "ylab_format": null,
+                "stacking": null,
+                "use_legend": true,
+                "click_func": null,
+                "cursor": null,
+                "tt_decimals": 2,
+                "tt_suffix": "",
+                "tt_percentages": false
             }
         }
     },
@@ -462,7 +1012,7 @@
     "config_analysis_dir": [
         "tests/"
     ],
-    "config_creation_date": "2020-10-22, 09:56",
+    "config_creation_date": "2020-10-24, 12:57",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
