@@ -51,8 +51,8 @@ class MultiqcModule(BaseMultiqcModule):
             self.findLogs(folder)
             self.print_alfa_charts(folder)
             self.calculatePercentage()
-            self.calculateEnhancement()
-            self.print_alfa_charts_enhancement(folder)
+            self.calculateEnrichment()
+            self.print_alfa_charts_enrichment(folder)
 
     def find_parent_folders(self):
         """
@@ -286,10 +286,10 @@ class MultiqcModule(BaseMultiqcModule):
             plot=bargraph.plot(self.biotypes),
         )
 
-    def print_alfa_charts_enhancement(self, folder: str):
+    def print_alfa_charts_enrichment(self, folder: str):
         """
         Takes in dictionary containing parsed data and passes them to MultiQC
-        function to print the enhancement graphs.
+        function to print the enrichment graphs.
         """
         cats = []
         for i in self.categories.keys():
@@ -336,19 +336,19 @@ class MultiqcModule(BaseMultiqcModule):
             # Show the percentages of each count in the tooltip
         }
         self.add_section(
-            name=f"{folder}-Enhancement-Categories",
+            name=f"{folder}-Enrichment-Categories",
             anchor="categories",
             plot=bargraph.plot(self.categories, cats, config),
         )
         self.add_section(
-            name=f"{folder}-Enhancement-BioTypes",
+            name=f"{folder}-Enrichment-BioTypes",
             anchor="biotypes",
             plot=bargraph.plot(self.biotypes, bios, config),
         )
 
     def calculatePercentage(self):
         """
-        Calculates the percentage of each type, needed for the enhancement graphs.
+        Calculates the percentage of each type, needed for the enrichment graphs.
         """
         categories_total = dict()
         biotypes_total = dict()
@@ -394,20 +394,20 @@ class MultiqcModule(BaseMultiqcModule):
                     self.biotypes_size[i][j] / biotypes_size_total[i] * 100
                 )
 
-    def calculateEnhancement(self):
+    def calculateEnrichment(self):
         """
         Calculates percentage of nucleotides divided by percentage of genome for
         total enrichment or depletion.
         """
         for i in self.categories.keys():
             for j in self.categories[i]:
-                self.categories[i][j] = math.log10(
+                self.categories[i][j] = math.log2(
                     self.categories[i][j] / self.categories_size[i][j]
                 )
 
         for i in self.biotypes.keys():
             for j in self.biotypes[i]:
-                self.biotypes[i][j] = math.log10(
+                self.biotypes[i][j] = math.log2(
                     self.biotypes[i][j] / self.biotypes_size[i][j]
                 )
 
