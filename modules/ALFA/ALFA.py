@@ -49,10 +49,12 @@ class MultiqcModule(BaseMultiqcModule):
         for folder in self.folders:
             self.reset()
             self.findLogs(folder)
-            self.print_alfa_charts(folder)
             self.calculatePercentage()
             self.calculateEnrichment()
-            self.print_alfa_charts_enrichment(folder)
+            self.print_alfa_charts(
+                folder=folder, data=self.categories, kind="Categories"
+            )
+            self.print_alfa_charts(folder=folder, data=self.biotypes, kind="Biotypes")
 
     def find_parent_folders(self):
         """
@@ -77,11 +79,29 @@ class MultiqcModule(BaseMultiqcModule):
         self.biotypes = dict()
         self.biotypes["temp"] = {}
 
+        self.categories_enrich = dict()
+        self.categories_enrich["temp"] = {}
+
+        self.biotypes_enrich = dict()
+        self.biotypes_enrich["temp"] = {}
+
+        self.categories_percent = dict()
+        self.categories_percent["temp"] = {}
+
+        self.biotypes_percent = dict()
+        self.biotypes_percent["temp"] = {}
+
         self.categories_size = dict()
         self.categories_size["temp"] = {}
 
         self.biotypes_size = dict()
         self.biotypes_size["temp"] = {}
+
+        self.categories_size_percent = dict()
+        self.categories_size_percent["temp"] = {}
+
+        self.biotypes_size_percent = dict()
+        self.biotypes_size_percent["temp"] = {}
 
         self.categories_temp = dict()
         self.categories_temp["temp"] = {}
@@ -270,36 +290,33 @@ class MultiqcModule(BaseMultiqcModule):
             if found == 0:
                 self.biotypes_size[i] = biotypes_size_temp[i]
 
-    def print_alfa_charts(self, folder: str):
+    def print_alfa_charts(self, folder: str, data: dict, kind: str):
         """
         Takes in dictionary containing parsed data and passes them to MultiQC
         function to print the graphs.
         """
         self.add_section(
-            name=f"{folder}-Categories",
-            anchor="categories",
-            plot=bargraph.plot(self.categories),
-        )
-        self.add_section(
-            name=f"{folder}-BioTypes",
-            anchor="biotypes",
-            plot=bargraph.plot(self.biotypes),
+            name=f"{folder}-{kind}",
+            anchor=f"{kind}",
+            plot=bargraph.plot(data),
         )
 
-    def print_alfa_charts_enrichment(self, folder: str):
+        self.print_alfa_charts_enrichment(folder=folder, kind=kind)
+
+    def print_alfa_charts_enrichment(self, folder: str, kind: str):
         """
         Takes in dictionary containing parsed data and passes them to MultiQC
         function to print the enrichment graphs.
         """
-        cats = []
-        for i in self.categories.keys():
-            for j in self.categories[i]:
-                cats.append(str(j))
+        if kind == "Categories":
+            data = self.categories_enrich
+        else:
+            data = self.biotypes_enrich
 
-        bios = []
-        for i in self.biotypes.keys():
-            for j in self.biotypes[i]:
-                bios.append(str(j))
+        cats = []
+        for i in data.keys():
+            for j in data[i]:
+                cats.append(str(j))
 
         config = {
             # Building the plot
@@ -336,20 +353,24 @@ class MultiqcModule(BaseMultiqcModule):
             # Show the percentages of each count in the tooltip
         }
         self.add_section(
-            name=f"{folder}-Enrichment-Categories",
-            anchor="categories",
-            plot=bargraph.plot(self.categories, cats, config),
-        )
-        self.add_section(
-            name=f"{folder}-Enrichment-BioTypes",
-            anchor="biotypes",
-            plot=bargraph.plot(self.biotypes, bios, config),
+            name=f"{folder}-{kind}-Enrichment",
+            anchor=f"{kind}",
+            plot=bargraph.plot(data, cats, config),
         )
 
     def calculatePercentage(self):
         """
         Calculates the percentage of each type, needed for the enrichment graphs.
         """
+        if "temp" in self.categories_percent:
+            del self.categories_percent["temp"]
+        if "temp" in self.biotypes_percent:
+            del self.biotypes_percent["temp"]
+        if "temp" in self.categories_size_percent:
+            del self.categories_size_percent["temp"]
+        if "temp" in self.biotypes_size_percent:
+            del self.biotypes_size_percent["temp"]
+
         categories_total = dict()
         biotypes_total = dict()
         for i in self.categories.keys():
@@ -361,13 +382,19 @@ class MultiqcModule(BaseMultiqcModule):
 
         # Divinding by total subiotypes
         for i in self.categories.keys():
+            self.categories_percent.setdefault(i, {})
             for j in self.categories[i]:
-                self.categories[i][j] = (
+                self.categories_percent[i].setdefault(j, 0)
+                self.categories_percent[i][j] = (
                     self.categories[i][j] / categories_total[i] * 100
                 )
         for i in self.biotypes.keys():
+            self.biotypes_percent.setdefault(i, {})
             for j in self.biotypes[i]:
-                self.biotypes[i][j] = self.biotypes[i][j] / biotypes_total[i] * 100
+                self.biotypes_percent[i].setdefault(j, 0)
+                self.biotypes_percent[i][j] = (
+                    self.biotypes[i][j] / biotypes_total[i] * 100
+                )
 
         categories_size_total = dict()
         biotypes_size_total = dict()
@@ -384,13 +411,17 @@ class MultiqcModule(BaseMultiqcModule):
 
         # Divinding by total subiotypes
         for i in self.categories_size.keys():
+            self.categories_size_percent.setdefault(i, {})
             for j in self.categories_size[i]:
-                self.categories_size[i][j] = (
+                self.categories_size_percent[i].setdefault(j, 0)
+                self.categories_size_percent[i][j] = (
                     self.categories_size[i][j] / categories_size_total[i] * 100
                 )
         for i in self.biotypes_size.keys():
+            self.biotypes_size_percent.setdefault(i, {})
             for j in self.biotypes_size[i]:
-                self.biotypes_size[i][j] = (
+                self.biotypes_size_percent[i].setdefault(j, 0)
+                self.biotypes_size_percent[i][j] = (
                     self.biotypes_size[i][j] / biotypes_size_total[i] * 100
                 )
 
@@ -399,16 +430,25 @@ class MultiqcModule(BaseMultiqcModule):
         Calculates percentage of nucleotides divided by percentage of genome for
         total enrichment or depletion.
         """
+        if "temp" in self.categories_enrich:
+            del self.categories_enrich["temp"]
+        if "temp" in self.biotypes_enrich:
+            del self.biotypes_enrich["temp"]
+
         for i in self.categories.keys():
+            self.categories_enrich.setdefault(i, {})
             for j in self.categories[i]:
-                self.categories[i][j] = math.log2(
-                    self.categories[i][j] / self.categories_size[i][j]
+                self.categories_enrich[i].setdefault(j, 0)
+                self.categories_enrich[i][j] = math.log2(
+                    self.categories_percent[i][j] / self.categories_size_percent[i][j]
                 )
 
         for i in self.biotypes.keys():
+            self.biotypes_enrich.setdefault(i, {})
             for j in self.biotypes[i]:
-                self.biotypes[i][j] = math.log2(
-                    self.biotypes[i][j] / self.biotypes_size[i][j]
+                self.biotypes_enrich[i].setdefault(j, 0)
+                self.biotypes_enrich[i][j] = math.log2(
+                    self.biotypes_percent[i][j] / self.biotypes_size_percent[i][j]
                 )
 
 
