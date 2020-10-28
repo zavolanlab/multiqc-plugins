@@ -39,8 +39,14 @@ class MultiqcModule(BaseMultiqcModule):
             name="ALFA",
             anchor="ALFA",
             href="https://github.com/biocompibens/ALFA",
-            info="is an example analysis module used for writing \
-                documentation.",
+            info="provides a global overview of features distribution \
+                composing NGS dataset(s). Given a set of aligned reads \
+                (BAM files) and an annotation file (GTF format with biotypes), \
+                the tool produces plots of the raw and normalized distributions \
+                of those reads among genomic categories (stop codon, 5'-UTR, \
+                CDS, intergenic, etc.) and biotypes protein coding genes, miRNA\
+                , tRNA, etc.). Whatever the sequencing technique, \
+                whatever the organism.",
         )
 
         self.folders = []
