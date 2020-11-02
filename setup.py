@@ -18,6 +18,7 @@ setup(
     entry_points={
         "multiqc.modules.v1": [
             "ALFA = modules.ALFA:MultiqcModule",
+            "tin-score = modules.tin_score:MultiqcModule"
         ],
         "multiqc.hooks.v1": ["execution_start = modules.ALFA:ALFA_execution_start"],
     },
