@@ -107,6 +107,14 @@ class MultiqcModule(BaseMultiqcModule):
             if i < 2:
                 continue
             if i % 2 == 1:
+                """
+                We have rounded the values in the tsv file
+                For example if in the tsv file, we have 75.0764183691,
+                it has been rounded to 75.0. This is done because
+                75.0764183691 is a very unique number and the the
+                probability that another transcript will have the same number
+                is extremely low, almost impossible.
+                """
                 sample_data.setdefault(round(float(listToStr[i])), 0)
                 sample_data[round(float(listToStr[i]))] = (
                     sample_data[round(float(listToStr[i]))] + 1
