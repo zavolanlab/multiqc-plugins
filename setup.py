@@ -20,7 +20,7 @@ setup(
             "ALFA = modules.ALFA:MultiqcModule",
             "tin-score = modules.tin_score:MultiqcModule",
         ],
-        "multiqc.hooks.v1": ["execution_start = modules.custom_code:execution_start"],
+        "multiqc.hooks.v1": ["execution_start = modules.hook:execution_start"],
     },
     classifiers=[
         "Development Status :: Beta",

@@ -1,11 +1,5 @@
 from multiqc.utils import config
 
-"""
-Setuptools hook to specify config and command-line functions.
-Add default config options for the things that are used in ALFA
-"""
-
-
 def execution_start():
     """Code to execute after the config files and
     command line flags have been parsedself.
