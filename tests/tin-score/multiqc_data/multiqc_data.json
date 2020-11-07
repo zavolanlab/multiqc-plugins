@@ -2,9 +2,9 @@
     "report_data_sources": {},
     "report_general_stats_data": [],
     "report_general_stats_headers": [],
-    "report_multiqc_command": "/home/krish8484/.local/bin/multiqc -m tin-score tests/",
+    "report_multiqc_command": "/usr/local/bin/multiqc -m tin-score tests/",
     "report_plot_data": {
-        "mqc_hcplot_dfmcypnuoq": {
+        "mqc_hcplot_rbiajovule": {
             "plot_type": "xy_line",
             "datasets": [
                 [
@@ -1639,7 +1639,7 @@
                 ]
             ],
             "config": {
-                "id": "mqc_hcplot_dfmcypnuoq"
+                "id": "mqc_hcplot_rbiajovule"
             }
         }
     },
@@ -1650,7 +1650,7 @@
     "config_analysis_dir": [
         "tests/"
     ],
-    "config_creation_date": "2020-11-03, 04:07",
+    "config_creation_date": "2020-11-07, 20:06",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,

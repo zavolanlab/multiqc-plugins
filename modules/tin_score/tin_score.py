@@ -39,7 +39,9 @@ class MultiqcModule(BaseMultiqcModule):
             anchor="tin-score",
             href="https://git.scicore.unibas.ch/zavolan_group/tools \
                 /tin_score_calculation",
-            info="",  # to add
+            info="Given a set of BAM files and a gene annotation \
+                BED file, calculates the Transcript Integrity \
+                Number (TIN) for each transcript.",
         )
 
         self.samples = []
