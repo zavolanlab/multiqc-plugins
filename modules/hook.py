@@ -1,5 +1,6 @@
 from multiqc.utils import config
 
+
 def execution_start():
     """Code to execute after the config files and
     command line flags have been parsedself.

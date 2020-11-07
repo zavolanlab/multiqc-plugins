@@ -37,7 +37,8 @@ class MultiqcModule(BaseMultiqcModule):
         super(MultiqcModule, self).__init__(
             name="tin-score",
             anchor="tin-score",
-            href="",  # to add
+            href="https://git.scicore.unibas.ch/zavolan_group/tools \
+                /tin_score_calculation",
             info="",  # to add
         )
 
@@ -113,7 +114,10 @@ class MultiqcModule(BaseMultiqcModule):
                 it has been rounded to 75.0. This is done because
                 75.0764183691 is a very unique number and the the
                 probability that another transcript will have the same number
-                is extremely low, almost impossible.
+                is extremely low, almost impossible. Therefore rounding here
+                is an effective binning strategy because it serves as
+                histogram 'bins' and we have better visualization of
+                data.
                 """
                 sample_data.setdefault(round(float(listToStr[i])), 0)
                 sample_data[round(float(listToStr[i]))] = (
