@@ -1,3 +1,3 @@
 from __future__ import absolute_import
 
-from .ALFA import MultiqcModule
+from .tin_score import MultiqcModule

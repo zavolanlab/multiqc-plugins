@@ -16,7 +16,6 @@ import os
 
 from multiqc.plots import bargraph
 from multiqc.modules.base_module import BaseMultiqcModule
-from multiqc.utils import config
 import math
 
 # Initialise the logger
@@ -456,21 +455,3 @@ class MultiqcModule(BaseMultiqcModule):
                 self.biotypes_enrich[i][j] = math.log2(
                     self.biotypes_percent[i][j] / self.biotypes_size_percent[i][j]
                 )
-
-
-"""
-Setuptools hook to specify config and command-line functions.
-Add default config options for the things that are used in ALFA
-"""
-
-
-def ALFA_execution_start():
-    """Code to execute after the config files and
-    command line flags have been parsedself.
-    This setuptools hook is the earliest that will be able
-    to use custom command line flags.
-    """
-
-    # Add to the search patterns used by modules
-    if "ALFA" not in config.sp:
-        config.update_dict(config.sp, {"ALFA": {"fn": "*ALFA_feature_counts.tsv"}})

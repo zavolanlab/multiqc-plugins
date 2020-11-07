@@ -19,8 +19,12 @@ jobs:
           pip install flake8 black
       - name: flake8
         run: |
-          flake8 modules/ALFA/ALFA.py 
+          flake8 modules/ALFA/ALFA.py
+          flake8 modules/tin_score/tin_score.py
+          flake8 modules/hook.py 
       - name: black
         run: |
           black --check setup.py
           black --check modules/ALFA/ALFA.py
+          black --check modules/tin_score/tin_score.py
+          black --check modules/hook.py
