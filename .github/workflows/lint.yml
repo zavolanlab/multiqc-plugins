@@ -1,0 +1,30 @@
+name: Lint Tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 black
+      - name: flake8
+        run: |
+          flake8 modules/ALFA/ALFA.py
+          flake8 modules/tin_score/tin_score.py
+          flake8 modules/hook.py 
+      - name: black
+        run: |
+          black --check setup.py
+          black --check modules/ALFA/ALFA.py
+          black --check modules/tin_score/tin_score.py
+          black --check modules/hook.py
