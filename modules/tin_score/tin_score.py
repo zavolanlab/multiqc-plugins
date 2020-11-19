@@ -37,7 +37,7 @@ class MultiqcModule(BaseMultiqcModule):
         super(MultiqcModule, self).__init__(
             name="TIN scores",
             anchor="tin-score",
-            href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-0922-z",
+            href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-0922-z", # noqa
             info=": Given a set of BAM files and a gene annotation \
                 BED file, calculates the Transcript Integrity \
                 Number (TIN) for each transcript.",
