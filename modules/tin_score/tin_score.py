@@ -35,11 +35,10 @@ class MultiqcModule(BaseMultiqcModule):
         plotting of graphs.
         """
         super(MultiqcModule, self).__init__(
-            name="tin-score",
+            name="TIN scores",
             anchor="tin-score",
-            href="https://git.scicore.unibas.ch/zavolan_group/tools \
-                /tin_score_calculation",
-            info="Given a set of BAM files and a gene annotation \
+            href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-0922-z",  # noqa
+            info=": Given a set of BAM files and a gene annotation \
                 BED file, calculates the Transcript Integrity \
                 Number (TIN) for each transcript.",
         )
@@ -76,7 +75,7 @@ class MultiqcModule(BaseMultiqcModule):
             raise UserWarning
 
         self.add_section(
-            name="TIN-score",
+            name="",
             anchor="tin-score",
             plot=linegraph.plot(data),
         )
