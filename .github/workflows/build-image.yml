@@ -1,12 +1,12 @@
 name: Docker registry
 
 on: 
-   push:
-     tags:
-       - 'v*'
+  push:
+    tags:
+      - 'v*'
 
 jobs:
-  github:
+  push_dockerhub:
     runs-on: ubuntu-latest    
     steps:
       - uses: actions/checkout@v1
