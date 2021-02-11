@@ -15,6 +15,9 @@ LABEL maintainer.location="Klingelbergstrasse 50/70, CH-4056 Basel, Switzerland"
 LABEL maintainer.lab="Zavolan Lab"
 LABEL maintainer.license="Apache License 2.0"
 
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+
 COPY modules modules
 COPY tests tests
 COPY setup.py .
