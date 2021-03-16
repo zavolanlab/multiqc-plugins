@@ -21,6 +21,7 @@ jobs:
         run: |
           flake8 modules/ALFA/ALFA.py
           flake8 modules/tin_score/tin_score.py
+          flake8 modules/zpca/zpca.py
           flake8 modules/hook.py 
       - name: black
         run: |
