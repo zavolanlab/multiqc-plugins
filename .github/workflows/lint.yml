@@ -27,4 +27,5 @@ jobs:
           black --check setup.py
           black --check modules/ALFA/ALFA.py
           black --check modules/tin_score/tin_score.py
+          black --check modules/zpca/zpca.py
           black --check modules/hook.py
