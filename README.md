@@ -13,8 +13,10 @@ To see a miniature example of a MultiQC plugin, visit [example-plugin].
 Custom Plugins in this repository by Zavolan Lab, University of Basel, Switzerland:
 - [ALFA]
 - [TIN-scores]
+- [ZPCA]
 
 [multiqc-plugins]: https://multiqc.info/docs/#multiqc-plugins
 [example-plugin]: https://github.com/MultiQC/example-plugin
 [ALFA]: https://github.com/biocompibens/ALFA
 [TIN-scores]: https://git.scicore.unibas.ch/zavolan_group/tools/tin_score_calculation
+[ZPCA]: https://github.com/zavolanlab/zpca
