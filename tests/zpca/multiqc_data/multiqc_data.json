@@ -4,7 +4,38 @@
     "report_general_stats_headers": [],
     "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f tests/",
     "report_plot_data": {
-        "mqc_hcplot_bowqigjlns": {
+        "mqc_hcplot_reicwvadmx": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "PC1",
+                    "PC2",
+                    "PC3"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Percentage of Explained Variance",
+                        "data": [
+                            40.7,
+                            13.5,
+                            12.9
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "cpswitch": false,
+                "cpswitch_c_active": true,
+                "title": null,
+                "ylab": "Explained Variance",
+                "xlab": "Principal Components",
+                "tt_percentages": false,
+                "id": "mqc_hcplot_reicwvadmx"
+            }
+        },
+        "mqc_hcplot_hmuvtiqwen": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -59,12 +90,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1",
-                "ylab": "PC2",
-                "id": "mqc_hcplot_bowqigjlns"
+                "xlab": "PC1 - 40.7",
+                "ylab": "PC2 - 13.5",
+                "id": "mqc_hcplot_hmuvtiqwen"
             }
         },
-        "mqc_hcplot_gxsloewrdj": {
+        "mqc_hcplot_rqcnxujmti": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -119,12 +150,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1",
-                "ylab": "PC3",
-                "id": "mqc_hcplot_gxsloewrdj"
+                "xlab": "PC1 - 40.7",
+                "ylab": "PC3 - 12.9",
+                "id": "mqc_hcplot_rqcnxujmti"
             }
         },
-        "mqc_hcplot_edpvuztqnw": {
+        "mqc_hcplot_igyowunprh": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -179,9 +210,9 @@
                 ]
             ],
             "config": {
-                "xlab": "PC2",
-                "ylab": "PC3",
-                "id": "mqc_hcplot_edpvuztqnw"
+                "xlab": "PC2 - 13.5",
+                "ylab": "PC3 - 12.9",
+                "id": "mqc_hcplot_igyowunprh"
             }
         }
     },
@@ -192,7 +223,7 @@
     "config_analysis_dir": [
         "tests/"
     ],
-    "config_creation_date": "2021-03-16, 22:14",
+    "config_creation_date": "2021-03-18, 18:15",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,

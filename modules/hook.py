@@ -13,5 +13,7 @@ def execution_start():
         config.update_dict(config.sp, {"ALFA": {"fn": "*ALFA_feature_counts.tsv"}})
     if "tin-score" not in config.sp:
         config.update_dict(config.sp, {"tin-score": {"fn": "TIN_score.tsv"}})
-    if "zpca" not in config.sp:
-        config.update_dict(config.sp, {"zpca": {"fn": "PCA.tsv"}})
+    if "zpca/pca" not in config.sp:
+        config.update_dict(config.sp, {"zpca/pca": {"fn": "PCA.tsv"}})
+    if "zpca/scree" not in config.sp:
+        config.update_dict(config.sp, {"zpca/scree": {"fn": "scree.tsv"}})
