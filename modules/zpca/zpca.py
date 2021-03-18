@@ -37,8 +37,8 @@ class MultiqcModule(BaseMultiqcModule):
         super(MultiqcModule, self).__init__(
             name="ZPCA",
             anchor="zpca",
-            href="TO ADD",  # TO DO: Add link and description
-            info="TO ADD",
+            href="https://github.com/zavolanlab/zpca",
+            info="TO ADD",  # TO DO: Add description
         )
 
         self.number = 0

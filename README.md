@@ -18,5 +18,5 @@ Custom Plugins in this repository by Zavolan Lab, University of Basel, Switzerla
 [multiqc-plugins]: https://multiqc.info/docs/#multiqc-plugins
 [example-plugin]: https://github.com/MultiQC/example-plugin
 [ALFA]: https://github.com/biocompibens/ALFA
-[TIN-scores]: https://git.scicore.unibas.ch/zavolan_group/tools/tin_score_calculation
+[TIN-scores]: https://github.com/zavolanlab/tin-score-calculation
 [ZPCA]: https://github.com/zavolanlab/zpca
