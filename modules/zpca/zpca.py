@@ -35,7 +35,7 @@ class MultiqcModule(BaseMultiqcModule):
         """
 
         super(MultiqcModule, self).__init__(
-            name="ZPCA",
+            name="zpca",
             anchor="zpca",
             href="https://github.com/zavolanlab/zpca",
             info="- PCA analysis",
