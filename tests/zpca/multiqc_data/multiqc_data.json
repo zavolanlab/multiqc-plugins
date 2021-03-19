@@ -2,40 +2,9 @@
     "report_data_sources": {},
     "report_general_stats_data": [],
     "report_general_stats_headers": [],
-    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f tests/",
+    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .",
     "report_plot_data": {
-        "mqc_hcplot_reicwvadmx": {
-            "plot_type": "bar_graph",
-            "samples": [
-                [
-                    "PC1",
-                    "PC2",
-                    "PC3"
-                ]
-            ],
-            "datasets": [
-                [
-                    {
-                        "name": "Percentage of Explained Variance",
-                        "data": [
-                            40.7,
-                            13.5,
-                            12.9
-                        ]
-                    }
-                ]
-            ],
-            "config": {
-                "cpswitch": false,
-                "cpswitch_c_active": true,
-                "title": null,
-                "ylab": "Explained Variance",
-                "xlab": "Principal Components",
-                "tt_percentages": false,
-                "id": "mqc_hcplot_reicwvadmx"
-            }
-        },
-        "mqc_hcplot_hmuvtiqwen": {
+        "mqc_hcplot_yndvkztlqb": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -90,12 +59,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 - 40.7",
-                "ylab": "PC2 - 13.5",
-                "id": "mqc_hcplot_hmuvtiqwen"
+                "xlab": "PC1 - 40.7 --> PC1 (40.7 variance explained)",
+                "ylab": "PC2 - 13.5 --> PC2 (13.5 variance explained)",
+                "id": "mqc_hcplot_yndvkztlqb"
             }
         },
-        "mqc_hcplot_rqcnxujmti": {
+        "mqc_hcplot_ubfticpsxz": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -150,12 +119,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 - 40.7",
-                "ylab": "PC3 - 12.9",
-                "id": "mqc_hcplot_rqcnxujmti"
+                "xlab": "PC1 - 40.7 --> PC1 (40.7 variance explained)",
+                "ylab": "PC3 - 12.9 --> PC3 (12.9 variance explained)",
+                "id": "mqc_hcplot_ubfticpsxz"
             }
         },
-        "mqc_hcplot_igyowunprh": {
+        "mqc_hcplot_tcjyuxzkra": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -210,20 +179,20 @@
                 ]
             ],
             "config": {
-                "xlab": "PC2 - 13.5",
-                "ylab": "PC3 - 12.9",
-                "id": "mqc_hcplot_igyowunprh"
+                "xlab": "PC2 - 13.5 --> PC2 (13.5 variance explained)",
+                "ylab": "PC3 - 12.9 --> PC3 (12.9 variance explained)",
+                "id": "mqc_hcplot_tcjyuxzkra"
             }
         }
     },
     "report_saved_raw_data": {},
     "config_analysis_dir_abs": [
-        "/home/krish8484/multiqc-plugins/tests"
+        "/home/krish8484/multiqc-plugins"
     ],
     "config_analysis_dir": [
-        "tests/"
+        "."
     ],
-    "config_creation_date": "2021-03-18, 18:15",
+    "config_creation_date": "2021-03-19, 20:57",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,

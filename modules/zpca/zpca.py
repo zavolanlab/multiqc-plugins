@@ -14,7 +14,7 @@
 from __future__ import print_function
 import logging
 
-from multiqc.plots import scatter, bargraph
+from multiqc.plots import scatter
 from multiqc.modules.base_module import BaseMultiqcModule
 
 # Initialise the logger
@@ -38,7 +38,7 @@ class MultiqcModule(BaseMultiqcModule):
             name="ZPCA",
             anchor="zpca",
             href="https://github.com/zavolanlab/zpca",
-            info="TO ADD",  # TO DO: Add description
+            info="- PCA analysis",
         )
 
         self.number = 0
@@ -52,58 +52,47 @@ class MultiqcModule(BaseMultiqcModule):
         for f in self.find_log_files("zpca/scree"):
             self.number += 1
             data_scree = self.parse_scree_logs(f)
-            config = {
-                # Building the plot
-                "cpswitch": False,  # Show the 'Counts / Percentages' switch?
-                "cpswitch_c_active": True,
-                # Customising the plot
-                "title": None,
-                "ylab": "Explained Variance",  # X axis label
-                "xlab": "Principal Components",
-                "tt_percentages": False,
-                # Show the percentages of each count in the tooltip
-            }
 
-            exp_car_str = "Percentage of Explained Variance"
-            cats = [exp_car_str]
-            self.add_section(
-                name="Scree plot",
-                anchor="scree",
-                plot=bargraph.plot(data_scree, cats, config),
-            )
+        exp_car_str = "Percentage of Explained Variance"
 
         for f in self.find_log_files("zpca/pca"):
             self.number += 1
             data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = self.parse_zpca_logs(f)
             config_pc1_pc2 = {
-                "xlab": f"PC1 - {data_scree['PC1'][exp_car_str]}",
-                "ylab": f"PC2 - {data_scree['PC2'][exp_car_str]}",
+                "xlab": f"PC1 - {data_scree['PC1'][exp_car_str]} --> PC1 "
+                f"({data_scree['PC1'][exp_car_str]} variance explained)",
+                "ylab": f"PC2 - {data_scree['PC2'][exp_car_str]} --> PC2 "
+                f"({data_scree['PC2'][exp_car_str]} variance explained)",
             }
 
             config_pc1_pc3 = {
-                "xlab": f"PC1 - {data_scree['PC1'][exp_car_str]}",
-                "ylab": f"PC3 - {data_scree['PC3'][exp_car_str]}",
+                "xlab": f"PC1 - {data_scree['PC1'][exp_car_str]} --> PC1 "
+                f"({data_scree['PC1'][exp_car_str]} variance explained)",
+                "ylab": f"PC3 - {data_scree['PC3'][exp_car_str]} --> PC3 "
+                f"({data_scree['PC3'][exp_car_str]} variance explained)",
             }
 
             config_pc2_pc3 = {
-                "xlab": f"PC2 - {data_scree['PC2'][exp_car_str]}",
-                "ylab": f"PC3 - {data_scree['PC3'][exp_car_str]}",
+                "xlab": f"PC2 - {data_scree['PC2'][exp_car_str]} --> PC2 "
+                f"({data_scree['PC2'][exp_car_str]} variance explained)",
+                "ylab": f"PC3 - {data_scree['PC3'][exp_car_str]} --> PC3 "
+                f"({data_scree['PC3'][exp_car_str]} variance explained)",
             }
 
             self.add_section(
-                name="PCA components 1 & 2",
+                name="PCA components: 1 & 2",
                 anchor="zpca",
                 plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
             )
 
             self.add_section(
-                name="PCA components 1 & 3",
+                name="PCA components: 1 & 3",
                 anchor="zpca",
                 plot=scatter.plot(data_pc1_pc3, config_pc1_pc3),
             )
 
             self.add_section(
-                name="PCA components 2 & 3",
+                name="PCA components: 2 & 3",
                 anchor="zpca",
                 plot=scatter.plot(data_pc2_pc3, config_pc2_pc3),
             )
