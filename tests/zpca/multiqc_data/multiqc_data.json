@@ -4,7 +4,7 @@
     "report_general_stats_headers": [],
     "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .",
     "report_plot_data": {
-        "mqc_hcplot_yndvkztlqb": {
+        "mqc_hcplot_dbovhpznef": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -59,12 +59,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 - 40.7 --> PC1 (40.7 variance explained)",
-                "ylab": "PC2 - 13.5 --> PC2 (13.5 variance explained)",
-                "id": "mqc_hcplot_yndvkztlqb"
+                "xlab": "PC1 (40.7 variance explained)",
+                "ylab": "PC2 (13.5 variance explained)",
+                "id": "mqc_hcplot_dbovhpznef"
             }
         },
-        "mqc_hcplot_ubfticpsxz": {
+        "mqc_hcplot_syaljgpicb": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -119,12 +119,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 - 40.7 --> PC1 (40.7 variance explained)",
-                "ylab": "PC3 - 12.9 --> PC3 (12.9 variance explained)",
-                "id": "mqc_hcplot_ubfticpsxz"
+                "xlab": "PC1 (40.7 variance explained)",
+                "ylab": "PC3 (12.9 variance explained)",
+                "id": "mqc_hcplot_syaljgpicb"
             }
         },
-        "mqc_hcplot_tcjyuxzkra": {
+        "mqc_hcplot_mosvnbhxpw": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -179,9 +179,9 @@
                 ]
             ],
             "config": {
-                "xlab": "PC2 - 13.5 --> PC2 (13.5 variance explained)",
-                "ylab": "PC3 - 12.9 --> PC3 (12.9 variance explained)",
-                "id": "mqc_hcplot_tcjyuxzkra"
+                "xlab": "PC2 (13.5 variance explained)",
+                "ylab": "PC3 (12.9 variance explained)",
+                "id": "mqc_hcplot_mosvnbhxpw"
             }
         }
     },
@@ -192,7 +192,7 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-03-19, 20:57",
+    "config_creation_date": "2021-03-19, 22:58",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,

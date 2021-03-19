@@ -1,49 +1,49 @@
-[2021-03-19 20:57:45,844] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/miniconda3/lib/python3.8/site-packages/multiqc_config.yaml
-[2021-03-19 20:57:45,844] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/.multiqc_config.yaml
-[2021-03-19 20:57:45,844] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
-[2021-03-19 20:57:45,844] multiqc                                            [DEBUG  ]  Command used: /home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .
-[2021-03-19 20:57:46,793] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.10
-[2021-03-19 20:57:46,794] multiqc                                            [INFO   ]  This is MultiQC v1.10
-[2021-03-19 20:57:46,794] multiqc                                            [DEBUG  ]  Command     : /home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .
-[2021-03-19 20:57:46,794] multiqc                                            [DEBUG  ]  Working dir : /home/krish8484/multiqc-plugins
-[2021-03-19 20:57:46,795] multiqc                                            [INFO   ]  Template    : default
-[2021-03-19 20:57:46,795] multiqc                                            [DEBUG  ]  Running Python 3.8.5 (default, Sep  4 2020, 07:30:14)  [GCC 7.3.0]
-[2021-03-19 20:57:46,795] multiqc                                            [INFO   ]  Searching   : /home/krish8484/multiqc-plugins
-[2021-03-19 20:57:46,797] multiqc                                            [INFO   ]  Only using modules zpca
-[2021-03-19 20:57:46,797] multiqc                                            [DEBUG  ]  Analysing modules: zpca
-[2021-03-19 20:57:46,797] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpkf8oksva
-[2021-03-19 20:57:46,805] multiqc                                            [DEBUG  ]  Ignored 253 search patterns as didn't match running modules.
-[2021-03-19 20:57:46,807] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/tin-score/multiqc_data
-[2021-03-19 20:57:46,808] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/zpca/multiqc_data
-[2021-03-19 20:57:46,808] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/ALFA/multiqc_data
-[2021-03-19 20:57:46,828] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: TIN_scores_boxplot_mqc.pdf
-[2021-03-19 20:57:46,828] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,829] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
-[2021-03-19 20:57:46,831] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
-[2021-03-19 20:57:46,898] multiqc                                            [INFO   ]  Compressing plot data
-[2021-03-19 20:57:46,905] multiqc                                            [WARNING]  Deleting    : tests/zpca/multiqc_report.html   (-f was specified)
-[2021-03-19 20:57:46,905] multiqc                                            [WARNING]  Deleting    : tests/zpca/multiqc_data   (-f was specified)
-[2021-03-19 20:57:46,905] multiqc                                            [INFO   ]  Report      : tests/zpca/multiqc_report.html
-[2021-03-19 20:57:46,906] multiqc                                            [INFO   ]  Data        : tests/zpca/multiqc_data
-[2021-03-19 20:57:46,906] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpkf8oksva/multiqc_data' to 'tests/zpca/multiqc_data'
-[2021-03-19 20:57:47,033] multiqc                                            [INFO   ]  MultiQC complete
+[2021-03-19 22:58:08,398] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/miniconda3/lib/python3.8/site-packages/multiqc_config.yaml
+[2021-03-19 22:58:08,398] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/.multiqc_config.yaml
+[2021-03-19 22:58:08,398] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-03-19 22:58:08,398] multiqc                                            [DEBUG  ]  Command used: /home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .
+[2021-03-19 22:58:09,443] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.10
+[2021-03-19 22:58:09,444] multiqc                                            [INFO   ]  This is MultiQC v1.10
+[2021-03-19 22:58:09,444] multiqc                                            [DEBUG  ]  Command     : /home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .
+[2021-03-19 22:58:09,445] multiqc                                            [DEBUG  ]  Working dir : /home/krish8484/multiqc-plugins
+[2021-03-19 22:58:09,445] multiqc                                            [INFO   ]  Template    : default
+[2021-03-19 22:58:09,445] multiqc                                            [DEBUG  ]  Running Python 3.8.5 (default, Sep  4 2020, 07:30:14)  [GCC 7.3.0]
+[2021-03-19 22:58:09,445] multiqc                                            [INFO   ]  Searching   : /home/krish8484/multiqc-plugins
+[2021-03-19 22:58:09,447] multiqc                                            [INFO   ]  Only using modules zpca
+[2021-03-19 22:58:09,448] multiqc                                            [DEBUG  ]  Analysing modules: zpca
+[2021-03-19 22:58:09,448] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpg9svnlsu
+[2021-03-19 22:58:09,454] multiqc                                            [DEBUG  ]  Ignored 253 search patterns as didn't match running modules.
+[2021-03-19 22:58:09,455] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/tin-score/multiqc_data
+[2021-03-19 22:58:09,456] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/zpca/multiqc_data
+[2021-03-19 22:58:09,457] multiqc                                            [DEBUG  ]  Ignoring directory as matched fn_ignore_dirs: ./tests/ALFA/multiqc_data
+[2021-03-19 22:58:09,478] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: TIN_scores_boxplot_mqc.pdf
+[2021-03-19 22:58:09,478] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,479] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,480] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,481] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Biotypes.pdf
+[2021-03-19 22:58:09,482] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: ALFA_plots.Categories.pdf
+[2021-03-19 22:58:09,546] multiqc                                            [INFO   ]  Compressing plot data
+[2021-03-19 22:58:09,552] multiqc                                            [WARNING]  Deleting    : tests/zpca/multiqc_report.html   (-f was specified)
+[2021-03-19 22:58:09,553] multiqc                                            [WARNING]  Deleting    : tests/zpca/multiqc_data   (-f was specified)
+[2021-03-19 22:58:09,553] multiqc                                            [INFO   ]  Report      : tests/zpca/multiqc_report.html
+[2021-03-19 22:58:09,553] multiqc                                            [INFO   ]  Data        : tests/zpca/multiqc_data
+[2021-03-19 22:58:09,553] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpg9svnlsu/multiqc_data' to 'tests/zpca/multiqc_data'
+[2021-03-19 22:58:09,638] multiqc                                            [INFO   ]  MultiQC complete
