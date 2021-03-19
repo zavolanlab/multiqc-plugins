@@ -59,18 +59,18 @@ class MultiqcModule(BaseMultiqcModule):
             self.number += 1
             data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = self.parse_zpca_logs(f)
             config_pc1_pc2 = {
-                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]} variance explained)",
-                "ylab": f"PC2 ({data_scree['PC2'][exp_car_str]} variance explained)",
+                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]}% variance explained)",
+                "ylab": f"PC2 ({data_scree['PC2'][exp_car_str]}% variance explained)",
             }
 
             config_pc1_pc3 = {
-                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]} variance explained)",
-                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]} variance explained)",
+                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]}% variance explained)",
+                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]}% variance explained)",
             }
 
             config_pc2_pc3 = {
-                "xlab": f"PC2 ({data_scree['PC2'][exp_car_str]} variance explained)",
-                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]} variance explained)",
+                "xlab": f"PC2 ({data_scree['PC2'][exp_car_str]}% variance explained)",
+                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]}% variance explained)",
             }
 
             self.add_section(

@@ -4,7 +4,7 @@
     "report_general_stats_headers": [],
     "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/ -f .",
     "report_plot_data": {
-        "mqc_hcplot_wtycjdabzg": {
+        "mqc_hcplot_iumeckbyoz": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -59,12 +59,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 (40.7 variance explained)",
-                "ylab": "PC2 (13.5 variance explained)",
-                "id": "mqc_hcplot_wtycjdabzg"
+                "xlab": "PC1 (40.7% variance explained)",
+                "ylab": "PC2 (13.5% variance explained)",
+                "id": "mqc_hcplot_iumeckbyoz"
             }
         },
-        "mqc_hcplot_xqtkozjswv": {
+        "mqc_hcplot_yiplmczosx": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -119,12 +119,12 @@
                 ]
             ],
             "config": {
-                "xlab": "PC1 (40.7 variance explained)",
-                "ylab": "PC3 (12.9 variance explained)",
-                "id": "mqc_hcplot_xqtkozjswv"
+                "xlab": "PC1 (40.7% variance explained)",
+                "ylab": "PC3 (12.9% variance explained)",
+                "id": "mqc_hcplot_yiplmczosx"
             }
         },
-        "mqc_hcplot_ydrtnphbcs": {
+        "mqc_hcplot_mecavikzdl": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -179,9 +179,9 @@
                 ]
             ],
             "config": {
-                "xlab": "PC2 (13.5 variance explained)",
-                "ylab": "PC3 (12.9 variance explained)",
-                "id": "mqc_hcplot_ydrtnphbcs"
+                "xlab": "PC2 (13.5% variance explained)",
+                "ylab": "PC3 (12.9% variance explained)",
+                "id": "mqc_hcplot_mecavikzdl"
             }
         }
     },
@@ -192,7 +192,7 @@
     "config_analysis_dir": [
         "."
     ],
-    "config_creation_date": "2021-03-19, 23:02",
+    "config_creation_date": "2021-03-19, 23:22",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
