@@ -25,3 +25,5 @@ jobs:
         run: multiqc -m ALFA tests/
       - name: Test TIN-score plugin
         run: multiqc -m tin-score tests/
+      - name: Test ZPCA plugin
+        run: multiqc -m zpca tests/
