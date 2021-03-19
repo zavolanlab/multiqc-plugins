@@ -19,6 +19,7 @@ setup(
         "multiqc.modules.v1": [
             "ALFA = modules.ALFA:MultiqcModule",
             "tin-score = modules.tin_score:MultiqcModule",
+            "zpca = modules.zpca:MultiqcModule",
         ],
         "multiqc.hooks.v1": ["execution_start = modules.hook:execution_start"],
     },
