@@ -74,7 +74,7 @@ class MultiqcModule(BaseMultiqcModule):
                         " explained)"
                     ),
                 }
-
+                print(data_scree)
                 config_pc1_pc3 = {
                     "xlab": (
                         f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
@@ -85,7 +85,7 @@ class MultiqcModule(BaseMultiqcModule):
                         " explained)"
                     ),
                 }
-
+                print(config_pc1_pc3)
                 config_pc2_pc3 = {
                     "xlab": (
                         f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
