@@ -53,85 +53,83 @@ class MultiqcModule(BaseMultiqcModule):
             self.number += 1
             data_scree = self.parse_scree_logs(f)
 
-        exp_car_str = "Percentage of Explained Variance"
+            exp_car_str = "Percentage of Explained Variance"
+            for f1 in self.find_log_files("zpca/pca"):
+                if f["root"] == f1["root"]:
+                    self.number += 1
+                    data_list = self.parse_zpca_logs(f1)
+                    if len(data_list) == 3:
+                        data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = (
+                            data_list[0],
+                            data_list[1],
+                            data_list[2],
+                        )
+                        config_pc1_pc2 = {
+                            "xlab": (
+                                f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                            "ylab": (
+                                f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                        }
+                        config_pc1_pc3 = {
+                            "xlab": (
+                                f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                            "ylab": (
+                                f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                        }
+                        config_pc2_pc3 = {
+                            "xlab": (
+                                f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                            "ylab": (
+                                f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                        }
 
-        for f in self.find_log_files("zpca/pca"):
-            self.number += 1
-            data_list = self.parse_zpca_logs(f)
-            if len(data_list) == 3:
-                data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = (
-                    data_list[0],
-                    data_list[1],
-                    data_list[2],
-                )
-                config_pc1_pc2 = {
-                    "xlab": (
-                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                    "ylab": (
-                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                }
-                print(data_scree)
-                config_pc1_pc3 = {
-                    "xlab": (
-                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                    "ylab": (
-                        f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                }
-                print(config_pc1_pc3)
-                config_pc2_pc3 = {
-                    "xlab": (
-                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                    "ylab": (
-                        f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                }
+                        self.add_section(
+                            name="PCA components: 1 & 2",
+                            anchor="zpca",
+                            plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
+                        )
 
-                self.add_section(
-                    name="PCA components: 1 & 2",
-                    anchor="zpca",
-                    plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
-                )
+                        self.add_section(
+                            name="PCA components: 1 & 3",
+                            anchor="zpca",
+                            plot=scatter.plot(data_pc1_pc3, config_pc1_pc3),
+                        )
 
-                self.add_section(
-                    name="PCA components: 1 & 3",
-                    anchor="zpca",
-                    plot=scatter.plot(data_pc1_pc3, config_pc1_pc3),
-                )
+                        self.add_section(
+                            name="PCA components: 2 & 3",
+                            anchor="zpca",
+                            plot=scatter.plot(data_pc2_pc3, config_pc2_pc3),
+                        )
+                    elif len(data_list) == 1:
+                        data_pc1_pc2 = data_list[0]
+                        config_pc1_pc2 = {
+                            "xlab": (
+                                f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                            "ylab": (
+                                f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                                " explained)"
+                            ),
+                        }
 
-                self.add_section(
-                    name="PCA components: 2 & 3",
-                    anchor="zpca",
-                    plot=scatter.plot(data_pc2_pc3, config_pc2_pc3),
-                )
-            elif len(data_list) == 1:
-                data_pc1_pc2 = data_list[0]
-                config_pc1_pc2 = {
-                    "xlab": (
-                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                    "ylab": (
-                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
-                        " explained)"
-                    ),
-                }
-
-                self.add_section(
-                    name="PCA components: 1 & 2",
-                    anchor="zpca",
-                    plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
-                )
+                        self.add_section(
+                            name="PCA components: 1 & 2",
+                            anchor="zpca",
+                            plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
+                        )
 
         if self.number == 0:
             raise UserWarning
