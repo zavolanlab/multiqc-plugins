@@ -57,39 +57,81 @@ class MultiqcModule(BaseMultiqcModule):
 
         for f in self.find_log_files("zpca/pca"):
             self.number += 1
-            data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = self.parse_zpca_logs(f)
-            config_pc1_pc2 = {
-                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]}% variance explained)",
-                "ylab": f"PC2 ({data_scree['PC2'][exp_car_str]}% variance explained)",
-            }
+            data_list = self.parse_zpca_logs(f)
+            if len(data_list) == 3:
+                data_pc1_pc2, data_pc1_pc3, data_pc2_pc3 = (
+                    data_list[0],
+                    data_list[1],
+                    data_list[2],
+                )
+                config_pc1_pc2 = {
+                    "xlab": (
+                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                    "ylab": (
+                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                }
 
-            config_pc1_pc3 = {
-                "xlab": f"PC1 ({data_scree['PC1'][exp_car_str]}% variance explained)",
-                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]}% variance explained)",
-            }
+                config_pc1_pc3 = {
+                    "xlab": (
+                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                    "ylab": (
+                        f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                }
 
-            config_pc2_pc3 = {
-                "xlab": f"PC2 ({data_scree['PC2'][exp_car_str]}% variance explained)",
-                "ylab": f"PC3 ({data_scree['PC3'][exp_car_str]}% variance explained)",
-            }
+                config_pc2_pc3 = {
+                    "xlab": (
+                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                    "ylab": (
+                        f"PC3 ({data_scree['PC3'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                }
 
-            self.add_section(
-                name="PCA components: 1 & 2",
-                anchor="zpca",
-                plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
-            )
+                self.add_section(
+                    name="PCA components: 1 & 2",
+                    anchor="zpca",
+                    plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
+                )
 
-            self.add_section(
-                name="PCA components: 1 & 3",
-                anchor="zpca",
-                plot=scatter.plot(data_pc1_pc3, config_pc1_pc3),
-            )
+                self.add_section(
+                    name="PCA components: 1 & 3",
+                    anchor="zpca",
+                    plot=scatter.plot(data_pc1_pc3, config_pc1_pc3),
+                )
 
-            self.add_section(
-                name="PCA components: 2 & 3",
-                anchor="zpca",
-                plot=scatter.plot(data_pc2_pc3, config_pc2_pc3),
-            )
+                self.add_section(
+                    name="PCA components: 2 & 3",
+                    anchor="zpca",
+                    plot=scatter.plot(data_pc2_pc3, config_pc2_pc3),
+                )
+            elif len(data_list) == 1:
+                data_pc1_pc2 = data_list[0]
+                config_pc1_pc2 = {
+                    "xlab": (
+                        f"PC1 ({data_scree['PC1'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                    "ylab": (
+                        f"PC2 ({data_scree['PC2'][exp_car_str]}% variance"
+                        " explained)"
+                    ),
+                }
+
+                self.add_section(
+                    name="PCA components: 1 & 2",
+                    anchor="zpca",
+                    plot=scatter.plot(data_pc1_pc2, config_pc1_pc2),
+                )
 
         if self.number == 0:
             raise UserWarning
@@ -101,7 +143,6 @@ class MultiqcModule(BaseMultiqcModule):
         """
         word = []
         words = []
-        listToStr1 = []
         listToStr = []
 
         for char in f["f"]:
@@ -111,19 +152,39 @@ class MultiqcModule(BaseMultiqcModule):
                 words.append(word)
                 word = []
 
-        # Concatinating each character
+        # Concatinating each word
         for k in words:
-            listToStr1.append("".join([str(elem) for elem in k]))
-        # Conactinating each word
-        for k in listToStr1:
             listToStr.append("".join([str(elem) for elem in k]))
 
-        exp_car_str = "Percentage of Explained Variance"
+        len_listToStr = len(listToStr)
 
+        if len_listToStr == 8:
+            return self._parse_scree_helper_3(listToStr)
+        elif len_listToStr == 6:
+            return self._parse_scree_helper_2(listToStr)
+        else:
+            return {}
+
+    def _parse_scree_helper_3(self, listToStr):
+        """
+        Helper function which will parse scree logs for 3 components.
+        """
+        exp_car_str = "Percentage of Explained Variance"
         scree_data = {
             "PC1": {exp_car_str: float(listToStr[-3])},
             "PC2": {exp_car_str: float(listToStr[-2])},
             "PC3": {exp_car_str: float(listToStr[-1])},
+        }
+        return scree_data
+
+    def _parse_scree_helper_2(self, listToStr):
+        """
+        Helper function which will parse scree logs for 2 components.
+        """
+        exp_car_str = "Percentage of Explained Variance"
+        scree_data = {
+            "PC1": {exp_car_str: float(listToStr[-2])},
+            "PC2": {exp_car_str: float(listToStr[-1])},
         }
         return scree_data
 
@@ -135,9 +196,7 @@ class MultiqcModule(BaseMultiqcModule):
         """
         word = []
         words = []
-        listToStr1 = []
         listToStr = []
-        data_dict = {}
 
         for char in f["f"]:
             if char != "\t" and char != "\n":
@@ -146,20 +205,31 @@ class MultiqcModule(BaseMultiqcModule):
                 words.append(word)
                 word = []
 
-        # Concatinating each character
+        # Concatinating each word
         for k in words:
-            listToStr1.append("".join([str(elem) for elem in k]))
-        # Conactinating each word
-        for k in listToStr1:
             listToStr.append("".join([str(elem) for elem in k]))
+
+        len_listToStr = len(listToStr)
+        if len_listToStr == 36:
+            return self._parse_zpca_helper_3(listToStr)
+        if len_listToStr == 9:
+            return self._parse_zpca_helper_2(listToStr)
+        else:
+            return []
+
+    def _parse_zpca_helper_3(self, listToStr: list):
+        """
+        Helper function which will parse logs with 3 components.
+        """
+        data_dict = {}
 
         for i_num in range(0, len(listToStr), 4):
             if i_num == 0:
                 continue
             data_dict[listToStr[i_num]] = [
-                listToStr1[i_num + 1],
-                listToStr1[i_num + 2],
-                listToStr1[i_num + 3],
+                listToStr[i_num + 1],
+                listToStr[i_num + 2],
+                listToStr[i_num + 3],
             ]
 
         data_pc1_pc2 = dict()
@@ -183,4 +253,29 @@ class MultiqcModule(BaseMultiqcModule):
                 "color": "#58a0c3",
             }
 
-        return data_pc1_pc2, data_pc1_pc3, data_pc2_pc3
+        return [data_pc1_pc2, data_pc1_pc3, data_pc2_pc3]
+
+    def _parse_zpca_helper_2(self, listToStr: list):
+        """
+        Helper function which will parse logs with 2 components.
+        """
+        data_dict = {}
+
+        for i_num in range(0, len(listToStr), 3):
+            if i_num == 0:
+                continue
+            data_dict[listToStr[i_num]] = [
+                listToStr[i_num + 1],
+                listToStr[i_num + 2],
+            ]
+
+        data_pc1_pc2 = dict()
+
+        for i in data_dict:
+            data_pc1_pc2[i] = {
+                "x": float(data_dict[i][0]),
+                "y": float(data_dict[i][1]),
+                "color": "#58a0c3",
+            }
+
+        return [data_pc1_pc2]

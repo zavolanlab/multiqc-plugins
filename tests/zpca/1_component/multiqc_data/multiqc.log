@@ -1,0 +1,22 @@
+[2021-04-13 19:48:52,992] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/miniconda3/lib/python3.8/site-packages/multiqc_config.yaml
+[2021-04-13 19:48:52,992] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/krish8484/.multiqc_config.yaml
+[2021-04-13 19:48:52,992] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2021-04-13 19:48:52,992] multiqc                                            [DEBUG  ]  Command used: /home/krish8484/miniconda3/bin/multiqc -m zpca -f tests/zpca/1_component/
+[2021-04-13 19:48:54,011] multiqc                                            [WARNING]  MultiQC Version v1.10.1 now available!
+[2021-04-13 19:48:54,012] multiqc                                            [INFO   ]  This is MultiQC v1.10
+[2021-04-13 19:48:54,012] multiqc                                            [DEBUG  ]  Command     : /home/krish8484/miniconda3/bin/multiqc -m zpca -f tests/zpca/1_component/
+[2021-04-13 19:48:54,012] multiqc                                            [DEBUG  ]  Working dir : /home/krish8484/multiqc-plugins
+[2021-04-13 19:48:54,012] multiqc                                            [INFO   ]  Template    : default
+[2021-04-13 19:48:54,012] multiqc                                            [DEBUG  ]  Running Python 3.8.5 (default, Sep  4 2020, 07:30:14)  [GCC 7.3.0]
+[2021-04-13 19:48:54,013] multiqc                                            [INFO   ]  Searching   : /home/krish8484/multiqc-plugins/tests/zpca/1_component
+[2021-04-13 19:48:54,014] multiqc                                            [INFO   ]  Only using modules zpca
+[2021-04-13 19:48:54,014] multiqc                                            [DEBUG  ]  Analysing modules: zpca
+[2021-04-13 19:48:54,014] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpzd6ooa19
+[2021-04-13 19:48:54,018] multiqc                                            [DEBUG  ]  Ignored 253 search patterns as didn't match running modules.
+[2021-04-13 19:48:54,097] multiqc                                            [INFO   ]  Compressing plot data
+[2021-04-13 19:48:54,098] multiqc                                            [WARNING]  Deleting    : multiqc_report.html   (-f was specified)
+[2021-04-13 19:48:54,098] multiqc                                            [WARNING]  Deleting    : multiqc_data   (-f was specified)
+[2021-04-13 19:48:54,099] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2021-04-13 19:48:54,099] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2021-04-13 19:48:54,099] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpzd6ooa19/multiqc_data' to '/home/krish8484/multiqc-plugins/multiqc_data'
+[2021-04-13 19:48:54,185] multiqc                                            [INFO   ]  MultiQC complete
