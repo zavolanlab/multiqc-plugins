@@ -155,16 +155,16 @@ class MultiqcModule(BaseMultiqcModule):
         for k in words:
             listToStr.append("".join([str(elem) for elem in k]))
 
-        len_listToStr = len(listToStr)
-
         """
-        Appropriate function is called depending upon the number
-        of elements in the list(which tells us whether the list
-        contains 1,2 or 3 components)
+        Appropriate function is called depending upon whether
+        the required components (PC_3_comp_list, PC_2_comp_list)
+        are present in tsv file(listToStr).
         """
-        if len_listToStr == 8:
+        PC_3_comp_list = ['PC1' ,  'PC2', 'PC3']
+        PC_2_comp_list = ['PC1' , 'PC2']
+        if all(elem in listToStr  for elem in PC_3_comp_list):
             return self._parse_scree_helper_3(listToStr)
-        elif len_listToStr == 6:
+        if all(elem in listToStr  for elem in PC_2_comp_list):
             return self._parse_scree_helper_2(listToStr)
         else:
             return {}
@@ -214,16 +214,16 @@ class MultiqcModule(BaseMultiqcModule):
         for k in words:
             listToStr.append("".join([str(elem) for elem in k]))
 
-        len_listToStr = len(listToStr)
-
         """
-        Appropriate function is called depending upon the number
-        of elements in the list(which tells us whether the list
-        contains 1,2 or 3 components)
+        Appropriate function is called depending upon whether
+        the required components (PC_3_comp_list, PC_2_comp_list)
+        are present in tsv file(listToStr).
         """
-        if len_listToStr == 36:
+        PC_3_comp_list = ['PC1' ,  'PC2', 'PC3']
+        PC_2_comp_list = ['PC1' , 'PC2']
+        if all(elem in listToStr  for elem in PC_3_comp_list):
             return self._parse_zpca_helper_3(listToStr)
-        if len_listToStr == 9:
+        if all(elem in listToStr  for elem in PC_2_comp_list):
             return self._parse_zpca_helper_2(listToStr)
         else:
             return []

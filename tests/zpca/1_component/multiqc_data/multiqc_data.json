@@ -2,7 +2,7 @@
     "report_data_sources": {},
     "report_general_stats_data": [],
     "report_general_stats_headers": [],
-    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -f tests/zpca/1_component/",
+    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/1_component/ -f tests/zpca/1_component/",
     "report_plot_data": {},
     "report_saved_raw_data": {},
     "config_analysis_dir_abs": [
@@ -11,7 +11,7 @@
     "config_analysis_dir": [
         "tests/zpca/1_component/"
     ],
-    "config_creation_date": "2021-04-13, 19:48",
+    "config_creation_date": "2021-04-15, 20:48",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,

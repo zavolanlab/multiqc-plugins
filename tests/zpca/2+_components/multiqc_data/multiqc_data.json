@@ -2,9 +2,9 @@
     "report_data_sources": {},
     "report_general_stats_data": [],
     "report_general_stats_headers": [],
-    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -f tests/zpca/2+_components/",
+    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/2+_components/ -f tests/zpca/2+_components/",
     "report_plot_data": {
-        "mqc_hcplot_stgxzaofhu": {
+        "mqc_hcplot_akpcjwfgmq": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -61,10 +61,10 @@
             "config": {
                 "xlab": "PC1 (40.7% variance explained)",
                 "ylab": "PC2 (13.5% variance explained)",
-                "id": "mqc_hcplot_stgxzaofhu"
+                "id": "mqc_hcplot_akpcjwfgmq"
             }
         },
-        "mqc_hcplot_jtbvnkphco": {
+        "mqc_hcplot_xmgjsfucny": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -121,10 +121,10 @@
             "config": {
                 "xlab": "PC1 (40.7% variance explained)",
                 "ylab": "PC3 (12.9% variance explained)",
-                "id": "mqc_hcplot_jtbvnkphco"
+                "id": "mqc_hcplot_xmgjsfucny"
             }
         },
-        "mqc_hcplot_linofjczgd": {
+        "mqc_hcplot_qwbnsfkhrd": {
             "plot_type": "scatter",
             "datasets": [
                 [
@@ -181,7 +181,7 @@
             "config": {
                 "xlab": "PC2 (13.5% variance explained)",
                 "ylab": "PC3 (12.9% variance explained)",
-                "id": "mqc_hcplot_linofjczgd"
+                "id": "mqc_hcplot_qwbnsfkhrd"
             }
         }
     },
@@ -192,7 +192,7 @@
     "config_analysis_dir": [
         "tests/zpca/2+_components/"
     ],
-    "config_creation_date": "2021-04-13, 20:15",
+    "config_creation_date": "2021-04-15, 20:49",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
