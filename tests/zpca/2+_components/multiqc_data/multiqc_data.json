@@ -1,0 +1,205 @@
+{
+    "report_data_sources": {},
+    "report_general_stats_data": [],
+    "report_general_stats_headers": [],
+    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/2+_components/ -f tests/zpca/2+_components/",
+    "report_plot_data": {
+        "mqc_hcplot_akpcjwfgmq": {
+            "plot_type": "scatter",
+            "datasets": [
+                [
+                    {
+                        "x": -45.06985201499767,
+                        "y": -11.0919392939198,
+                        "name": "cond1_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -54.34361152225513,
+                        "y": -0.3123624203110116,
+                        "name": "cond1_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -66.01080251904887,
+                        "y": 2.5130015834757304,
+                        "name": "cond2_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -73.75403820893116,
+                        "y": -3.9941019611716952,
+                        "name": "cond2_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -74.1561280238807,
+                        "y": 1.158758115190247,
+                        "name": "cond2_rep3",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 91.91686250564436,
+                        "y": 101.51042886375065,
+                        "name": "cond3_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 111.33102896128841,
+                        "y": -4.972067831391827,
+                        "name": "cond3_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 110.08654082218085,
+                        "y": -84.8117170556223,
+                        "name": "cond3_rep3",
+                        "color": "#58a0c3"
+                    }
+                ]
+            ],
+            "config": {
+                "xlab": "PC1 (40.7% variance explained)",
+                "ylab": "PC2 (13.5% variance explained)",
+                "id": "mqc_hcplot_akpcjwfgmq"
+            }
+        },
+        "mqc_hcplot_xmgjsfucny": {
+            "plot_type": "scatter",
+            "datasets": [
+                [
+                    {
+                        "x": -45.06985201499767,
+                        "y": -7.658774123129098,
+                        "name": "cond1_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -54.34361152225513,
+                        "y": -1.4983286684608172,
+                        "name": "cond1_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -66.01080251904887,
+                        "y": 1.9384196066813113,
+                        "name": "cond2_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -73.75403820893116,
+                        "y": 8.117668348343306,
+                        "name": "cond2_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -74.1561280238807,
+                        "y": 3.1313201848544683,
+                        "name": "cond2_rep3",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 91.91686250564436,
+                        "y": -46.609144011876786,
+                        "name": "cond3_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 111.33102896128841,
+                        "y": 103.72043360685014,
+                        "name": "cond3_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 110.08654082218085,
+                        "y": -61.14159494326234,
+                        "name": "cond3_rep3",
+                        "color": "#58a0c3"
+                    }
+                ]
+            ],
+            "config": {
+                "xlab": "PC1 (40.7% variance explained)",
+                "ylab": "PC3 (12.9% variance explained)",
+                "id": "mqc_hcplot_xmgjsfucny"
+            }
+        },
+        "mqc_hcplot_qwbnsfkhrd": {
+            "plot_type": "scatter",
+            "datasets": [
+                [
+                    {
+                        "x": -11.0919392939198,
+                        "y": -7.658774123129098,
+                        "name": "cond1_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -0.3123624203110116,
+                        "y": -1.4983286684608172,
+                        "name": "cond1_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 2.5130015834757304,
+                        "y": 1.9384196066813113,
+                        "name": "cond2_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -3.9941019611716952,
+                        "y": 8.117668348343306,
+                        "name": "cond2_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 1.158758115190247,
+                        "y": 3.1313201848544683,
+                        "name": "cond2_rep3",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 101.51042886375065,
+                        "y": -46.609144011876786,
+                        "name": "cond3_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -4.972067831391827,
+                        "y": 103.72043360685014,
+                        "name": "cond3_rep2",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": -84.8117170556223,
+                        "y": -61.14159494326234,
+                        "name": "cond3_rep3",
+                        "color": "#58a0c3"
+                    }
+                ]
+            ],
+            "config": {
+                "xlab": "PC2 (13.5% variance explained)",
+                "ylab": "PC3 (12.9% variance explained)",
+                "id": "mqc_hcplot_qwbnsfkhrd"
+            }
+        }
+    },
+    "report_saved_raw_data": {},
+    "config_analysis_dir_abs": [
+        "/home/krish8484/multiqc-plugins/tests/zpca/2+_components"
+    ],
+    "config_analysis_dir": [
+        "tests/zpca/2+_components/"
+    ],
+    "config_creation_date": "2021-04-15, 20:49",
+    "config_git_hash": null,
+    "config_intro_text": null,
+    "config_report_comment": null,
+    "config_report_header_info": null,
+    "config_script_path": "/home/krish8484/miniconda3/lib/python3.8/site-packages/multiqc/utils",
+    "config_short_version": "1.10",
+    "config_subtitle": null,
+    "config_title": null,
+    "config_version": "1.10"
+}
