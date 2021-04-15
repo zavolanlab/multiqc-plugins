@@ -1,0 +1,49 @@
+{
+    "report_data_sources": {},
+    "report_general_stats_data": [],
+    "report_general_stats_headers": [],
+    "report_multiqc_command": "/home/krish8484/miniconda3/bin/multiqc -m zpca -o tests/zpca/2_components/ -f tests/zpca/2_components/",
+    "report_plot_data": {
+        "mqc_hcplot_odghrvjbsq": {
+            "plot_type": "scatter",
+            "datasets": [
+                [
+                    {
+                        "x": -78.88870415886339,
+                        "y": 1.6842083283563625e-13,
+                        "name": "cond1_rep1",
+                        "color": "#58a0c3"
+                    },
+                    {
+                        "x": 78.88870415886339,
+                        "y": -1.6842083283563625e-13,
+                        "name": "cond2_rep1",
+                        "color": "#58a0c3"
+                    }
+                ]
+            ],
+            "config": {
+                "xlab": "PC1 (100.0% variance explained)",
+                "ylab": "PC2 (0.0% variance explained)",
+                "id": "mqc_hcplot_odghrvjbsq"
+            }
+        }
+    },
+    "report_saved_raw_data": {},
+    "config_analysis_dir_abs": [
+        "/home/krish8484/multiqc-plugins/tests/zpca/2_components"
+    ],
+    "config_analysis_dir": [
+        "tests/zpca/2_components/"
+    ],
+    "config_creation_date": "2021-04-15, 20:49",
+    "config_git_hash": null,
+    "config_intro_text": null,
+    "config_report_comment": null,
+    "config_report_header_info": null,
+    "config_script_path": "/home/krish8484/miniconda3/lib/python3.8/site-packages/multiqc/utils",
+    "config_short_version": "1.10",
+    "config_subtitle": null,
+    "config_title": null,
+    "config_version": "1.10"
+}
