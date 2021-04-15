@@ -143,6 +143,7 @@ class MultiqcModule(BaseMultiqcModule):
         words = []
         listToStr = []
 
+        # Using \t as a seperator for elements in tsv file
         for char in f["f"]:
             if char != "\t" and char != "\n":
                 word.append(char)
@@ -150,12 +151,17 @@ class MultiqcModule(BaseMultiqcModule):
                 words.append(word)
                 word = []
 
-        # Concatinating each word
+        # Adding each element of the tsv file in a list
         for k in words:
             listToStr.append("".join([str(elem) for elem in k]))
 
         len_listToStr = len(listToStr)
 
+        """
+        Appropriate function is called depending upon the number
+        of elements in the list(which tells us whether the list
+        contains 1,2 or 3 components)
+        """
         if len_listToStr == 8:
             return self._parse_scree_helper_3(listToStr)
         elif len_listToStr == 6:
@@ -196,6 +202,7 @@ class MultiqcModule(BaseMultiqcModule):
         words = []
         listToStr = []
 
+        # Using \t as a seperator for elements in tsv file
         for char in f["f"]:
             if char != "\t" and char != "\n":
                 word.append(char)
@@ -203,11 +210,17 @@ class MultiqcModule(BaseMultiqcModule):
                 words.append(word)
                 word = []
 
-        # Concatinating each word
+        # Adding each element of the tsv file in a list
         for k in words:
             listToStr.append("".join([str(elem) for elem in k]))
 
         len_listToStr = len(listToStr)
+
+        """
+        Appropriate function is called depending upon the number
+        of elements in the list(which tells us whether the list
+        contains 1,2 or 3 components)
+        """
         if len_listToStr == 36:
             return self._parse_zpca_helper_3(listToStr)
         if len_listToStr == 9:
