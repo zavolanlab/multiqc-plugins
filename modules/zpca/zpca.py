@@ -160,11 +160,11 @@ class MultiqcModule(BaseMultiqcModule):
         the required components (PC_3_comp_list, PC_2_comp_list)
         are present in tsv file(listToStr).
         """
-        PC_3_comp_list = ['PC1' ,  'PC2', 'PC3']
-        PC_2_comp_list = ['PC1' , 'PC2']
-        if all(elem in listToStr  for elem in PC_3_comp_list):
+        PC_3_comp_list = ["PC1", "PC2", "PC3"]
+        PC_2_comp_list = ["PC1", "PC2"]
+        if all(elem in listToStr for elem in PC_3_comp_list):
             return self._parse_scree_helper_3(listToStr)
-        if all(elem in listToStr  for elem in PC_2_comp_list):
+        if all(elem in listToStr for elem in PC_2_comp_list):
             return self._parse_scree_helper_2(listToStr)
         else:
             return {}
@@ -219,11 +219,11 @@ class MultiqcModule(BaseMultiqcModule):
         the required components (PC_3_comp_list, PC_2_comp_list)
         are present in tsv file(listToStr).
         """
-        PC_3_comp_list = ['PC1' ,  'PC2', 'PC3']
-        PC_2_comp_list = ['PC1' , 'PC2']
-        if all(elem in listToStr  for elem in PC_3_comp_list):
+        PC_3_comp_list = ["PC1", "PC2", "PC3"]
+        PC_2_comp_list = ["PC1", "PC2"]
+        if all(elem in listToStr for elem in PC_3_comp_list):
             return self._parse_zpca_helper_3(listToStr)
-        if all(elem in listToStr  for elem in PC_2_comp_list):
+        if all(elem in listToStr for elem in PC_2_comp_list):
             return self._parse_zpca_helper_2(listToStr)
         else:
             return []
