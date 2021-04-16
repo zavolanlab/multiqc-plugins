@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="multiqc_plugins",
-    version="1.1.0",
+    version="1.2.1",
     author="Krish Agarwal",
     author_email="akrish136@gmail.com",
     description="MultiQC plugins for the Zavolan Lab \
