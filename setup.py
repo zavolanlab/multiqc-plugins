@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="multiqc_plugins",
-    version="1.2.1",
+    version="1.3",
     author="Krish Agarwal",
     author_email="akrish136@gmail.com",
     description="MultiQC plugins for the Zavolan Lab \
@@ -24,11 +24,11 @@ setup(
         "multiqc.hooks.v1": ["execution_start = modules.hook:execution_start"],
     },
     classifiers=[
-        "Development Status :: Beta",
+        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Environment :: Web Environment",
         "Intended Audience :: Science/Research",
-        "License :: Apache 2.0",
+        "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Operating System :: Unix",
         "Programming Language :: Python",
