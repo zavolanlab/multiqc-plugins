@@ -28,7 +28,7 @@ setup(
         "Environment :: Console",
         "Environment :: Web Environment",
         "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: Apache Software License"
+        "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Operating System :: Unix",
         "Programming Language :: Python",
