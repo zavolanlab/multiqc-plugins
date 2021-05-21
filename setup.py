@@ -24,11 +24,11 @@ setup(
         "multiqc.hooks.v1": ["execution_start = modules.hook:execution_start"],
     },
     classifiers=[
-        "Development Status :: Beta",
+        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Environment :: Web Environment",
         "Intended Audience :: Science/Research",
-        "License :: Apache 2.0",
+        "License :: OSI Approved :: Apache Software License"
         "Natural Language :: English",
         "Operating System :: Unix",
         "Programming Language :: Python",
