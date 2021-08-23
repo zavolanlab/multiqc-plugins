@@ -54,6 +54,10 @@ class MultiqcModule(BaseMultiqcModule):
         for folder in self.folders:
             self.reset()
             self.findLogs(folder)
+            if folder == "Unique":
+                folder = "UniqueMappers"
+            elif folder == "UniqueMultiple":
+                folder = "MultimappersIncluded"
             self.calculatePercentage()
             self.calculateEnrichment()
             self.print_alfa_charts(
@@ -162,10 +166,6 @@ class MultiqcModule(BaseMultiqcModule):
         fullFilename = f["fn"]
         part2 = fullFilename.find(".ALFA_feature_counts.tsv")
         part1 = fullFilename[0:part2]
-        if part1 == "Unique":
-            part1 = "UniqueMappers"
-        elif part1 == "UniqueMultiple":
-            part1 = "MultimappersIncluded"
         return part1
 
     def parse_alfa_logs(self, f: dict, filename: str):
