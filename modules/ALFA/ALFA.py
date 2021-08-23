@@ -135,10 +135,6 @@ class MultiqcModule(BaseMultiqcModule):
         for f in self.find_log_files("ALFA"):
             if os.path.basename(f["root"]) == folder:
                 filename = self.get_filename(f)
-                if filename == "Unique":
-                    filename = "UniqueMappers"
-                elif filename == "UniqueMultiple":
-                    filename = "MultimappersIncluded"
                 if filename not in self.filesDone:
                     self.number = self.number + 1
                     self.filesDone = self.filesDone + [filename]
@@ -166,6 +162,10 @@ class MultiqcModule(BaseMultiqcModule):
         fullFilename = f["fn"]
         part2 = fullFilename.find(".ALFA_feature_counts.tsv")
         part1 = fullFilename[0:part2]
+        if part1 == "Unique":
+            part1 = "UniqueMappers"
+        elif part1 == "UniqueMultiple":
+            part1 = "MultimappersIncluded"
         return part1
 
     def parse_alfa_logs(self, f: dict, filename: str):
