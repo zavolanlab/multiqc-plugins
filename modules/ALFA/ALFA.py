@@ -135,7 +135,10 @@ class MultiqcModule(BaseMultiqcModule):
         for f in self.find_log_files("ALFA"):
             if os.path.basename(f["root"]) == folder:
                 filename = self.get_filename(f)
-
+                if filename == 'Unique':
+                    filename = 'UniqueMappers'
+                elif filename == 'UniqueMultiple':
+                    filename = 'MultimappersIncluded'
                 if filename not in self.filesDone:
                     self.number = self.number + 1
                     self.filesDone = self.filesDone + [filename]
